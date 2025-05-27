@@ -100,7 +100,7 @@ const LoginPage = () => {
             >
                 <CaretLeft size={28} />
             </button>
-            <div className="w-full max-w-sm space-y-5 mx-auto flex-grow flex flex-col justify-center"> 
+            <div className="w-full max-w-sm space-y-5 mx-auto flex-grow flex flex-col justify-center">
                 <h1 className="text-3xl md:text-4xl font-semibold text-gray-900 text-center mb-6 md:mb-8">
                     Log in
                 </h1>
@@ -129,11 +129,40 @@ const LoginPage = () => {
                 <div className="flex flex-col  items-center justify-between mt-4 gap-4">
                     <p>or</p>
                     <div className="flex flex-row w-full gap-4">
-                        <Button size="lg" type="submit" className="w-full bg-violet-600">
-                            Log in
+                        <Button size="lg" type="button" className="w-full bg-violet-50 hover:bg-violet-100 border border-violet-200 text-violet-600"
+                            onPress={() => handleOAuthLogin('google')}
+                        >
+                            <div className="flex items-center gap-2">
+                                {/* Google SVG */}
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 48 48"
+                                    className="w-5 h-5 text-violet-600"
+                                    aria-hidden="true"
+                                >
+                                    <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+                                    <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                                    <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                                    <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                                </svg>
+                                <span>Google</span>
+                            </div>
                         </Button>
-                        <Button size="lg" type="submit" className="w-full bg-violet-600">
-                            Log in
+
+                        <Button size="lg" type="button" className="w-full bg-violet-700 hover:bg-violet-600 text-white"
+                            onClick={() => handleOAuthLogin('facebook')}>
+                            <div className="flex items-center gap-2">
+                                {/* Facebook SVG */}
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 48 48"
+                                    className="w-5 h-5 text-white"
+                                    aria-hidden="true"
+                                >
+                                    <path fill="currentColor" d="M48 24C48 10.745 37.255 0 24 0S0 10.745 0 24c0 11.979 8.776 21.908 20.25 23.708V30.938h-6.094V24h6.094v-5.288c0-6.014 3.583-9.337 9.065-9.337 2.625 0 5.372.469 5.372.469v5.906h-3.026c-2.981 0-3.911 1.85-3.911 3.75V24h6.656l-1.064 6.938H27.75v16.77C39.224 45.908 48 35.979 48 24z" />
+                                </svg>
+                                <span>Facebook</span>
+                            </div>
                         </Button>
                     </div>
                 </div>
