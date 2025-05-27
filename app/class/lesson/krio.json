@@ -1,0 +1,71 @@
+{
+    "Use basic phrases": {
+        "greetings": {
+            "hello": "kushɛ",
+            "Friend": "padi",
+            "Finish": "dɔn",
+            "Man": "man",
+            "Please": "duya",
+            "Night": "nɛt",
+            "Money": "kɔpɔ",
+            "Food": "it",
+            "Water": "wata",
+            "Good": "gud",
+            "Bad": "bɔd",
+            "Yes": "ye",
+            "No": "nɔ",
+            "Door": "domɔt",
+            "House": "hɔs",
+            "Come": "kɔm",
+            "Go": "go",
+            "Sit": "sɛt",
+            "Stand": "stɛnd",
+            "Eat": "it",
+            "Drink": "drin",
+            "Sleep": "slip",
+            "Wake": "wɛk",
+            "Run": "rɔn",
+            "Walk": "wɔk",
+            "Talk": "tɔk",
+            "Listen": "lɪsɛn",
+            "Read": "rid",
+            "Write": "raɪt",
+            "Sing": "sɪŋ",
+            "Dance": "dæns",
+            "Play": "pleɪ",
+            "Work": "wɔk",
+            "Study": "stʌdi",
+            "Learn": "lɜrn",
+            "Teach": "tiʧ",
+            "Help": "hɛlp",
+            "Love": "lɔv",
+            "Like": "laɪk",
+            "Hate": "heɪt",
+            "Want": "wɔnt",
+            "Need": "nid"
+        }
+    },
+    "greetings": {
+        "hello": "kushɛ",
+        "good_morning": "Gud mɔnin",
+        "good_afternoon": "Gud aftanun",
+        "good_evening": "Gud ivnin",
+        "good_night": "Gud nɛt",
+        "welcome": [
+            "Kabɔ",
+            "Wɛlkɔm"
+        ],
+        "how_are_you": [
+            "Aw yu du?",
+            "Aw di bɔdi",
+            "Aw di go de go?"
+        ],
+        "how_are_you_all_doing": "Aw una all dea do?"
+    },
+    "goodbyes": {
+        "good_bye": [
+            "A de go",
+            "Baybay"
+        ]
+    }
+}

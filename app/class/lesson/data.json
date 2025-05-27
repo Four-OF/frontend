@@ -1,0 +1,3726 @@
+[
+    {
+        "name": "Krio",
+        "chapters": [
+            {
+                "chapter_number": 1,
+                "topics": [
+                    {
+                        "name": "Use basic phrases",
+                        "learning_data": [
+                            {
+                                "phrase": "Hello","translation": "kushɛ"
+                            },
+                            {
+                                "phrase": "Thank you","translation": "tɛnki"
+                            },
+                            {
+                                "phrase": "Please",
+                                "translation": "duya"
+                            },
+                            {
+                                "phrase": "Friend",
+                                "translation": "padi"
+                            },
+                            {
+                                "phrase": "Night",
+                                "translation": "nɛt"
+                            },
+                            {
+                                "phrase": "Money",
+                                "translation": "kɔpɔ"
+                            },
+                            {
+                                "phrase": "Food",
+                                "translation": "it"
+                            },
+                            {
+                                "phrase": "Door",
+                                "translation": "domɔt"
+                            },
+                            {
+                                "phrase": "Man",
+                                "translation": "man"
+                            },
+                            {
+                                "phrase": "Finish","translation": "dɔn"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Greet people and goodbye",
+                        "learning_data": [
+                            {
+                                "phrase": "Good morning",
+                                "translation": "Gud mɔnin"
+                            },
+                            {
+                                "phrase": "Good afternoon",
+                                "translation": "Gud aftanun "
+                            },
+                            {
+                                "phrase": "Good evening",
+                                "translation": "Gud ivnin"
+                            },
+                            {
+                                "phrase": "Good night",
+                                "translation": "Gud nɛt"
+                            },
+                            {
+                                "phrase": "Goodbye",
+                                "translation": "Baibai"
+                            },
+                            {
+                                "phrase": "See you later",
+                                "translation": "ok later"
+                            },
+                            {
+                                "phrase": "Welcome",
+                                "translation": " Kabɔ"
+                            },
+                            {
+                                "phrase": "How are you?",
+                                "translation": "Aw di bɔdi"
+                            },
+
+                            {
+                                "phrase": "What is your name?",
+                                "translation": "Watin na u nem"
+                            },
+                            {
+                                "phrase": "My name is...",
+                                "translation": "Mi nem na ..."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Introduce yourself/myself",
+                        "learning_data": [
+                            {
+                                "phrase": "My name is...",
+                                "translation": "Mi nem na..."
+                            },
+                            {
+                                "phrase": "I am from...",
+                                "translation": "Ah komot na..."
+                            },
+                            {
+                                "phrase": "Nice to meet you",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "I am a student",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "I am a teacher",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "How old are you?",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "I am happy",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "I am tired",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "I like...",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "I don't like...",
+                                "translation": "Placeholder (Krio)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Refer to family members",
+                        "learning_data": [
+                            {
+                                "phrase": "Mother",
+                                "translation": "Mama"
+                            },
+                            {
+                                "phrase": "Father",
+                                "translation": "Papa"
+                            },
+                            {
+                                "phrase": "Brother",
+                                "translation": "Brɔda"
+                            },
+                            {
+                                "phrase": "Sister",
+                                "translation": "Sista"
+                            },
+                            {
+                                "phrase": "Son",
+                                "translation": "Boy Pikin"
+                            },
+                            {
+                                "phrase": "Daughter",
+                                "translation": "Girl Pikin"
+                            },
+                            {
+                                "phrase": "Grandmother",
+                                "translation": "Grandnee"
+                            },
+                            {
+                                "phrase": "Grandfather",
+                                "translation": "Grandpa"
+                            },
+                            {
+                                "phrase": "Aunt",
+                                "translation": "Anti"
+                            },
+                            {
+                                "phrase": "Uncle",
+                                "translation": "Uncle"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Review and test",
+                        "learning_data": [
+                            {
+                                "phrase": "Review chapter 1 phrases",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Test your knowledge",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Practice greetings",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Practice introductions",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Practice family terms",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Can you say hello?",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "What does 'thank you' mean?",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "How do you say 'My name is...'?",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Translate 'Mother'",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Match the phrase",
+                                "translation": "Placeholder (Krio)"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "chapter_number": 2,
+                "topics": [
+                    {
+                        "name": "Numbers",
+                        "learning_data": [
+                            {
+                                "phrase": "One",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Two",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Three",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Four",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Five",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Six",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Seven",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Eight",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Nine",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Ten",
+                                "translation": "Placeholder (Krio)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Polite phrases",
+                        "learning_data": [
+                            {
+                                "phrase": "Please",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Thank you very much",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "You're welcome",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Excuse me (passing by)",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "May I come in?",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Can you help me?",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "I am sorry",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "It's okay",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "No problem",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Bless you (sneeze)",
+                                "translation": "Placeholder (Krio)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Object Vocabulary",
+                        "learning_data": [
+                            {
+                                "phrase": "Book",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Pen",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Table",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Chair",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "House",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Car",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Phone",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Bag",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Water",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Key",
+                                "translation": "Placeholder (Krio)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Basic food and drinks",
+                        "learning_data": [
+                            {
+                                "phrase": "Water",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Food",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Bread",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Rice",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Meat",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Fish",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Milk",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Tea",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Coffee",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Fruit",
+                                "translation": "Placeholder (Krio)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Review and test",
+                        "learning_data": [
+                            {
+                                "phrase": "Review chapter 2 phrases",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Count to ten",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Name 5 objects",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Ask for food",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Translate 'thank you'",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "What is 'two'?",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "How do you say 'water'?",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Identify the polite phrase",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Match the number",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Translate 'bread'",
+                                "translation": "Placeholder (Krio)"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "chapter_number": 3,
+                "topics": [
+                    {
+                        "name": "Describing and Locating",
+                        "learning_data": [
+                            {
+                                "phrase": "Big",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Small",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Red",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Blue",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Good",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Bad",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Here",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "There",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Left",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Right",
+                                "translation": "Placeholder (Krio)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Basic Conjunctions",
+                        "learning_data": [
+                            {
+                                "phrase": "And",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "But",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Or",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Because",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "If",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "When",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "So",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Although",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "While",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Then",
+                                "translation": "Placeholder (Krio)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Prepositions of Place",
+                        "learning_data": [
+                            {
+                                "phrase": "In",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "On",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Under",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Next to",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Behind",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "In front of",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Between",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Near",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Far",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Above",
+                                "translation": "Placeholder (Krio)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Daily Activities",
+                        "learning_data": [
+                            {
+                                "phrase": "Wake up",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Eat",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Drink",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Go to work",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Go to school",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Sleep",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Read",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Write",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Cook",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Clean",
+                                "translation": "Placeholder (Krio)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Review and test",
+                        "learning_data": [
+                            {
+                                "phrase": "Review chapter 3 phrases",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Describe an object",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Locate something",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Use a conjunction",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Practice prepositions",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Talk about daily routine",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "What is 'big'?",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "How do you say 'and'?",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Where is the book?",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Translate 'sleep'",
+                                "translation": "Placeholder (Krio)"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "chapter_number": 4,
+                "topics": [
+                    {
+                        "name": "Further Learning",
+                        "learning_data": [
+                            {
+                                "phrase": "How to ask a question",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Expressing opinions",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Future tense",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Past tense",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Complex sentences",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Cultural greetings",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Common proverbs",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Idiomatic expressions",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Travel phrases",
+                                "translation": "Placeholder (Krio)"
+                            },
+                            {
+                                "phrase": "Shopping phrases",
+                                "translation": "Placeholder (Krio)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Mende",
+        "chapters": [
+            {
+                "chapter_number": 1,
+                "topics": [
+                    {
+                        "name": "Use basic phrases",
+                        "learning_data": [
+                            {
+                                "phrase": "Hello",
+                                "translation": "Buwaa"
+                            },
+                            {
+                                "phrase": "Boy",
+                                "translation": "Hindolo"
+                            },
+                            {
+                                "phrase": "Stop",
+                                "translation": "Gbe"
+                            },
+                            {
+                                "phrase": "Water",
+                                "translation": "Njaa"
+                            },
+                            {
+                                "phrase": "Bus",
+                                "translation": "Bɔɔsi"
+                            },
+                            {
+                                "phrase": "Nye na",
+                                "translation": "My name is"
+                            },
+                            {
+                                "phrase": "Hurry up",
+                                "translation": "Mafula"
+                            },
+                            {
+                                "phrase": "House",
+                                "translation": "Pɛɛ"
+                            },
+                            {
+                                "phrase": "Kèkè ",
+                                "translation": "Father"
+                            },
+                            {
+                                "phrase": "Afternoon",
+                                "translation": "Fulihun"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Greet people and goodbye",
+                        "learning_data": [
+                            {
+                                "phrase": "Good morning",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Good afternoon",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Good evening",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Good night",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Goodbye",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "See you later",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Welcome",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "How are you?",
+                                "translation": "Kahuin ye na?"
+                            },
+                            {
+                                "phrase": "I'm well",
+                                "translation": "Nya ngahun gbuango"
+                            },
+                            {
+                                "phrase": "What is your name?",
+                                "translation": "Placeholder (Mende)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Introduce yourself/myself",
+                        "learning_data": [
+                            {
+                                "phrase": "My name is...",
+                                "translation": "Nye na ..."
+                            },
+                            {
+                                "phrase": "I am from...",
+                                "translation": "Nye ta ..."
+                            },
+                            {
+                                "phrase": "Nice to meet you",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "I am a ...",
+                                "translation": "Nye ye ..."
+                            },
+                            {
+                                "phrase": "I am a teacher",
+                                "translation": "Nye ye kɔɔni"
+                            },
+                            {
+                                "phrase": "How old are you?",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "I am happy",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "I am tired",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "I like...",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "I don't like...",
+                                "translation": "Placeholder (Mende)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Refer to family members",
+                        "learning_data": [
+                            {
+                                "phrase": "Mother",
+                                "translation": "Nyâpo"
+                            },
+                            {
+                                "phrase": "Father",
+                                "translation": "Kèkè"
+                            },
+                            {
+                                "phrase": "Brother",
+                                "translation": "Kɛrɛ"
+                            },
+                            {
+                                "phrase": "Sister",
+                                "translation": "Sisi"
+                            },
+                            {
+                                "phrase": "Maternal uncle",
+                                "translation": "Mɔkɛrɛ fɔlɔ"
+                            },
+                            {
+                                "phrase": "Maternal aunt",
+                                "translation": "Sisimɔ fɔlɔma"
+                            },
+                            {
+                                "phrase": "Grandmother",
+                                "translation": "Fɔlɔma"
+                            },
+                            {
+                                "phrase": "Grandfather",
+                                "translation": "Fɔlɔ"
+                            },
+                            {
+                                "phrase": "Aunt",
+                                "translation": "Sisimɔ"
+                            },
+                            {
+                                "phrase": "Uncle",
+                                "translation": "Mɔkɛrɛ"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Review and test",
+                        "learning_data": [
+                            {
+                                "phrase": "Review chapter 1 phrases",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Test your knowledge",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Practice greetings",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Practice introductions",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Practice family terms",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Can you say hello?",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "What does 'thank you' mean?",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "How do you say 'My name is...'?",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Translate 'Mother'",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Match the phrase",
+                                "translation": "Placeholder (Mende)"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "chapter_number": 2,
+                "topics": [
+                    {
+                        "name": "Numbers",
+                        "learning_data": [
+                            {
+                                "phrase": "One",
+                                "translation": "Itaa "
+                            },
+                            {
+                                "phrase": "Two",
+                                "translation": "Fεlε"
+                            },
+                            {
+                                "phrase": "Three",
+                                "translation": "Sawa"
+                            },
+                            {
+                                "phrase": "Four",
+                                "translation": " Naani"
+                            },
+                            {
+                                "phrase": "Five",
+                                "translation": " Lээlu"
+                            },
+                            {
+                                "phrase": "Six",
+                                "translation": "Weita"
+                            },
+                            {
+                                "phrase": "Seven",
+                                "translation": " Wэfla"
+                            },
+                            {
+                                "phrase": "Eight",
+                                "translation": " Wayakpa"
+                            },
+                            {
+                                "phrase": "Nine",
+                                "translation": " Taalu"
+                            },
+                            {
+                                "phrase": "Ten",
+                                "translation": "Puu"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Polite phrases",
+                        "learning_data": [
+                            {
+                                "phrase": "Please",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Thank you very much",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "You're welcome",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Excuse me (passing by)",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "May I come in?",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Can you help me?",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "I am sorry",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "It's okay",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "No problem",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Bless you (sneeze)",
+                                "translation": "Placeholder (Mende)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Object Vocabulary",
+                        "learning_data": [
+                            {
+                                "phrase": "Book",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Pen",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Table",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Chair",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "House",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Car",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Phone",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Bag",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Water",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Key",
+                                "translation": "Placeholder (Mende)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Basic food and drinks",
+                        "learning_data": [
+                            {
+                                "phrase": "Water",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Food",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Bread",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Rice",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Meat",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Fish",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Milk",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Tea",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Coffee",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Fruit",
+                                "translation": "Placeholder (Mende)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Review and test",
+                        "learning_data": [
+                            {
+                                "phrase": "Review chapter 2 phrases",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Count to ten",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Name 5 objects",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Ask for food",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Translate 'thank you'",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "What is 'two'?",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "How do you say 'water'?",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Identify the polite phrase",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Match the number",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Translate 'bread'",
+                                "translation": "Placeholder (Mende)"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "chapter_number": 3,
+                "topics": [
+                    {
+                        "name": "Describing and Locating",
+                        "learning_data": [
+                            {
+                                "phrase": "Big",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Small",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Red",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Blue",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Good",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Bad",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Here",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "There",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Left",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Right",
+                                "translation": "Placeholder (Mende)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Basic Conjunctions",
+                        "learning_data": [
+                            {
+                                "phrase": "And",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "But",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Or",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Because",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "If",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "When",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "So",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Although",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "While",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Then",
+                                "translation": "Placeholder (Mende)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Prepositions of Place",
+                        "learning_data": [
+                            {
+                                "phrase": "In",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "On",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Under",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Next to",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Behind",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "In front of",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Between",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Near",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Far",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Above",
+                                "translation": "Placeholder (Mende)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Daily Activities",
+                        "learning_data": [
+                            {
+                                "phrase": "Wake up",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Eat",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Drink",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Go to work",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Go to school",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Sleep",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Read",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Write",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Cook",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Clean",
+                                "translation": "Placeholder (Mende)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Review and test",
+                        "learning_data": [
+                            {
+                                "phrase": "Review chapter 3 phrases",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Describe an object",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Locate something",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Use a conjunction",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Practice prepositions",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Talk about daily routine",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "What is 'big'?",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "How do you say 'and'?",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Where is the book?",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Translate 'sleep'",
+                                "translation": "Placeholder (Mende)"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "chapter_number": 4,
+                "topics": [
+                    {
+                        "name": "Further Learning",
+                        "learning_data": [
+                            {
+                                "phrase": "How to ask a question",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Expressing opinions",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Future tense",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Past tense",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Complex sentences",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Cultural greetings",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Common proverbs",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Idiomatic expressions",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Travel phrases",
+                                "translation": "Placeholder (Mende)"
+                            },
+                            {
+                                "phrase": "Shopping phrases",
+                                "translation": "Placeholder (Mende)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Temne",
+        "chapters": [
+            {
+                "chapter_number": 1,
+                "topics": [
+                    {
+                        "name": "Use basic phrases",
+                        "learning_data": [
+                            {
+                                "phrase": "Hi",
+                                "translation": "SEkE"
+                            },
+                            {
+                                "phrase": "fourof",
+                                "translation": "talk"
+                            },
+                            {
+                                "phrase": "ask",
+                                "translation": "yif"
+                            },
+                            {
+                                "phrase": "man",
+                                "translation": "wanduni"
+                            },
+                            {
+                                "phrase": "Woman",
+                                "translation": "wunibom"
+                            },
+                            {
+                                "phrase": "Friend",
+                                "translation": "wan"
+                            },
+                            {
+                                "phrase": "eat",
+                                "translation": "di"
+                            },
+                            {
+                                "phrase": "red",
+                                "translation": "yim"
+                            },
+                            {
+                                "phrase": "greet",
+                                "translation": "kori"
+                            },
+                            {
+                                "phrase": "fly",
+                                "translation": "tot"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Greet people and goodbye",
+                        "learning_data": [
+                            {
+                                "phrase": "Hi friend",
+                                "translation": "Wan seke"
+                            },
+                            {
+                                "phrase": "Hi",
+                                "translation": "SEkE"
+                            },
+                            {
+                                "phrase": "Good morning",
+                                "translation": "N'deerai"
+                            },
+                            {
+                                "phrase": "Good afternoon",
+                                "translation": " M'peari"
+                            },
+                            {
+                                "phrase": "Goodbye",
+                                "translation": "owa-o"
+                            },
+                            {
+                                "phrase": "How about you?",
+                                "translation": "munon-a?"
+                            },
+                            
+                            {
+                                "phrase": "How are you?",
+                                "translation": " Tope ander-e?"
+                            },
+                            {
+                                "phrase": "I am fine",
+                                "translation": "min yenki"
+                            },
+                            {
+                                "phrase": "What is your name?",
+                                "translation": "nes a mu-a?"
+                            },
+                            {
+                                "phrase": "I am called....",
+                                "translation": "Mine yi..."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Introduce yourself/myself",
+                        "learning_data": [
+                            {
+                                "phrase": "My name is...",
+                                "translation": "Mine yi..."
+                            },
+                            {
+                                "phrase": "Have a nice day",
+                                "translation": "Mam-pearao."
+                            },
+                            {
+                                "phrase": "Nice to meet you",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "I am a student",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "I am a teacher",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "How old are you?",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "I am happy",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "I am tired",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "I like...",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "I don't like...",
+                                "translation": "Placeholder (Temne)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Refer to family members",
+                        "learning_data": [
+                            {
+                                "phrase": "Mother",
+                                "translation": "Ya"
+                            },
+                            {
+                                "phrase": "Father",
+                                "translation": "Kas"
+                            },
+                            {
+                                "phrase": "Brother",
+                                "translation": "Wont kor runi"
+                            },
+                            {
+                                "phrase": "Sister",
+                                "translation": "Wont kor berah"
+                            },
+                            {
+                                "phrase": "Son",
+                                "translation": "runi"
+                            },
+                            {
+                                "phrase": "Daughter",
+                                "translation": "berah"
+                            },
+                            {
+                                "phrase": "Grandmother",
+                                "translation": "Yayo"
+                            },
+                            {
+                                "phrase": "Grandfather",
+                                "translation": "Yankas"
+                            },
+                            {
+                                "phrase": "Aunt",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Uncle",
+                                "translation": "Placeholder (Temne)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Review and test",
+                        "learning_data": [
+                            {
+                                "phrase": "Review chapter 1 phrases",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Test your knowledge",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Practice greetings",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Practice introductions",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Practice family terms",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Can you say hello?",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "What does 'thank you' mean?",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "How do you say 'My name is...'?",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Translate 'Mother'",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Match the phrase",
+                                "translation": "Placeholder (Temne)"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "chapter_number": 2,
+                "topics": [
+                    {
+                        "name": "Numbers",
+                        "learning_data": [
+                            {
+                                "phrase": "One",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Two",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Three",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Four",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Five",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Six",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Seven",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Eight",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Nine",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Ten",
+                                "translation": "Placeholder (Temne)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Polite phrases",
+                        "learning_data": [
+                            {
+                                "phrase": "Please",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Thank you very much",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "You're welcome",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Excuse me (passing by)",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "May I come in?",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Can you help me?",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "I am sorry",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "It's okay",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "No problem",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Bless you (sneeze)",
+                                "translation": "Placeholder (Temne)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Object Vocabulary",
+                        "learning_data": [
+                            {
+                                "phrase": "Book",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Pen",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Table",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Chair",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "House",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Car",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Phone",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Bag",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Water",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Key",
+                                "translation": "Placeholder (Temne)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Basic food and drinks",
+                        "learning_data": [
+                            {
+                                "phrase": "Water",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Food",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Bread",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Rice",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Meat",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Fish",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Milk",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Tea",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Coffee",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Fruit",
+                                "translation": "Placeholder (Temne)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Review and test",
+                        "learning_data": [
+                            {
+                                "phrase": "Review chapter 2 phrases",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Count to ten",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Name 5 objects",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Ask for food",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Translate 'thank you'",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "What is 'two'?",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "How do you say 'water'?",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Identify the polite phrase",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Match the number",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Translate 'bread'",
+                                "translation": "Placeholder (Temne)"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "chapter_number": 3,
+                "topics": [
+                    {
+                        "name": "Describing and Locating",
+                        "learning_data": [
+                            {
+                                "phrase": "Big",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Small",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Red",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Blue",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Good",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Bad",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Here",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "There",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Left",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Right",
+                                "translation": "Placeholder (Temne)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Basic Conjunctions",
+                        "learning_data": [
+                            {
+                                "phrase": "And",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "But",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Or",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Because",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "If",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "When",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "So",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Although",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "While",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Then",
+                                "translation": "Placeholder (Temne)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Prepositions of Place",
+                        "learning_data": [
+                            {
+                                "phrase": "In",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "On",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Under",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Next to",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Behind",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "In front of",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Between",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Near",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Far",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Above",
+                                "translation": "Placeholder (Temne)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Daily Activities",
+                        "learning_data": [
+                            {
+                                "phrase": "Wake up",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Eat",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Drink",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Go to work",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Go to school",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Sleep",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Read",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Write",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Cook",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Clean",
+                                "translation": "Placeholder (Temne)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Review and test",
+                        "learning_data": [
+                            {
+                                "phrase": "Review chapter 3 phrases",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Describe an object",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Locate something",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Use a conjunction",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Practice prepositions",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Talk about daily routine",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "What is 'big'?",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "How do you say 'and'?",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Where is the book?",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Translate 'sleep'",
+                                "translation": "Placeholder (Temne)"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "chapter_number": 4,
+                "topics": [
+                    {
+                        "name": "Further Learning",
+                        "learning_data": [
+                            {
+                                "phrase": "How to ask a question",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Expressing opinions",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Future tense",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Past tense",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Complex sentences",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Cultural greetings",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Common proverbs",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Idiomatic expressions",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Travel phrases",
+                                "translation": "Placeholder (Temne)"
+                            },
+                            {
+                                "phrase": "Shopping phrases",
+                                "translation": "Placeholder (Temne)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Yoruba",
+        "chapters": [
+            {
+                "chapter_number": 1,
+                "topics": [
+                    {
+                        "name": "Use basic phrases",
+                        "learning_data": [
+                            {
+                                "phrase": "Hello",
+                                "translation": "Kaaro (Good morning), Bawo (How are you?)"
+                            },
+                            {
+                                "phrase": "Thank you",
+                                "translation": "Ese"
+                            },
+                            {
+                                "phrase": "Please",
+                                "translation": "E jowo"
+                            },
+                            {
+                                "phrase": "Excuse me",
+                                "translation": "E jowo"
+                            },
+                            {
+                                "phrase": "Yes",
+                                "translation": "Beeni"
+                            },
+                            {
+                                "phrase": "No",
+                                "translation": "Rara"
+                            },
+                            {
+                                "phrase": "Okay",
+                                "translation": "O da"
+                            },
+                            {
+                                "phrase": "Sorry",
+                                "translation": "Ma binu"
+                            },
+                            {
+                                "phrase": "Help",
+                                "translation": "Iranlowo"
+                            },
+                            {
+                                "phrase": "I don't understand",
+                                "translation": "Mi o gbo"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Greet people and goodbye",
+                        "learning_data": [
+                            {
+                                "phrase": "Good morning",
+                                "translation": "E kaaro"
+                            },
+                            {
+                                "phrase": "Good afternoon",
+                                "translation": "E kaasan"
+                            },
+                            {
+                                "phrase": "Good evening",
+                                "translation": "E kaale"
+                            },
+                            {
+                                "phrase": "Good night",
+                                "translation": "O daaro"
+                            },
+                            {
+                                "phrase": "Goodbye",
+                                "translation": "O dabọ"
+                            },
+                            {
+                                "phrase": "See you later",
+                                "translation": "A o pade"
+                            },
+                            {
+                                "phrase": "Welcome",
+                                "translation": "E kaabo"
+                            },
+                            {
+                                "phrase": "How are you?",
+                                "translation": "Bawo ni?"
+                            },
+                            {
+                                "phrase": "I am fine",
+                                "translation": "Mo wa daadaa"
+                            },
+                            {
+                                "phrase": "What is your name?",
+                                "translation": "Ki ni orukọ rẹ?"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Introduce yourself/myself",
+                        "learning_data": [
+                            {
+                                "phrase": "My name is...",
+                                "translation": "Orukọ mi ni..."
+                            },
+                            {
+                                "phrase": "I am from...",
+                                "translation": "Mo wa lati..."
+                            },
+                            {
+                                "phrase": "Nice to meet you",
+                                "translation": "Inu mi dun lati pade yin"
+                            },
+                            {
+                                "phrase": "I am a student",
+                                "translation": "Mo jẹ akẹkọ"
+                            },
+                            {
+                                "phrase": "I am a teacher",
+                                "translation": "Mo jẹ olukọ"
+                            },
+                            {
+                                "phrase": "How old are you?",
+                                "translation": "Ọmọ ọdun melo ni ọ?"
+                            },
+                            {
+                                "phrase": "I am happy",
+                                "translation": "Inu mi dun"
+                            },
+                            {
+                                "phrase": "I am tired",
+                                "translation": "Mo rẹ mi"
+                            },
+                            {
+                                "phrase": "I like...",
+                                "translation": "Mo fẹran..."
+                            },
+                            {
+                                "phrase": "I don't like...",
+                                "translation": "Mi o fẹran..."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Refer to family members",
+                        "learning_data": [
+                            {
+                                "phrase": "Mother",
+                                "translation": "Iya"
+                            },
+                            {
+                                "phrase": "Father",
+                                "translation": "Baba"
+                            },
+                            {
+                                "phrase": "Brother",
+                                "translation": "Egbon (older), Aburo (younger)"
+                            },
+                            {
+                                "phrase": "Sister",
+                                "translation": "Egbon (older), Aburo (younger)"
+                            },
+                            {
+                                "phrase": "Son",
+                                "translation": "Ọmọkunrin"
+                            },
+                            {
+                                "phrase": "Daughter",
+                                "translation": "Ọmọbinrin"
+                            },
+                            {
+                                "phrase": "Grandmother",
+                                "translation": "Iya-agba"
+                            },
+                            {
+                                "phrase": "Grandfather",
+                                "translation": "Baba-agba"
+                            },
+                            {
+                                "phrase": "Aunt",
+                                "translation": "Anti (or Iya-agba if older)"
+                            },
+                            {
+                                "phrase": "Uncle",
+                                "translation": "Baba-agba (or Uncle if younger)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Review and test",
+                        "learning_data": [
+                            {
+                                "phrase": "Review chapter 1 phrases",
+                                "translation": "Ṣe atunyẹwo awọn gbolohun ori 1"
+                            },
+                            {
+                                "phrase": "Test your knowledge",
+                                "translation": "Idanwo imọ rẹ"
+                            },
+                            {
+                                "phrase": "Practice greetings",
+                                "translation": "Ṣe adaṣe ikini"
+                            },
+                            {
+                                "phrase": "Practice introductions",
+                                "translation": "Ṣe adaṣe ifihan"
+                            },
+                            {
+                                "phrase": "Practice family terms",
+                                "translation": "Ṣe adaṣe awọn ọrọ idile"
+                            },
+                            {
+                                "phrase": "Can you say hello?",
+                                "translation": "Ṣe o le sọ pe kaaro?"
+                            },
+                            {
+                                "phrase": "What does 'Ese' mean?",
+                                "translation": "Kini 'Ese' tumọ si?"
+                            },
+                            {
+                                "phrase": "How do you say 'My name is...'?",
+                                "translation": "Bawo ni o ṣe sọ 'Orukọ mi ni...'?"
+                            },
+                            {
+                                "phrase": "Translate 'Mother'",
+                                "translation": "Tumọ 'Mother'"
+                            },
+                            {
+                                "phrase": "Match the phrase",
+                                "translation": "Baamu gbolohun naa"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "chapter_number": 2,
+                "topics": [
+                    {
+                        "name": "Numbers",
+                        "learning_data": [
+                            {
+                                "phrase": "One",
+                                "translation": "Ọkan"
+                            },
+                            {
+                                "phrase": "Two",
+                                "translation": "Meji"
+                            },
+                            {
+                                "phrase": "Three",
+                                "translation": "Mẹta"
+                            },
+                            {
+                                "phrase": "Four",
+                                "translation": "Mẹrin"
+                            },
+                            {
+                                "phrase": "Five",
+                                "translation": "Marun"
+                            },
+                            {
+                                "phrase": "Six",
+                                "translation": "Mẹfa"
+                            },
+                            {
+                                "phrase": "Seven",
+                                "translation": "Meje"
+                            },
+                            {
+                                "phrase": "Eight",
+                                "translation": "Mẹjọ"
+                            },
+                            {
+                                "phrase": "Nine",
+                                "translation": "Mẹsan"
+                            },
+                            {
+                                "phrase": "Ten",
+                                "translation": "Mẹwa"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Polite phrases",
+                        "learning_data": [
+                            {
+                                "phrase": "Please",
+                                "translation": "E jowo"
+                            },
+                            {
+                                "phrase": "Thank you very much",
+                                "translation": "Ese gan"
+                            },
+                            {
+                                "phrase": "You're welcome",
+                                "translation": "Ko to pe"
+                            },
+                            {
+                                "phrase": "Excuse me (passing by)",
+                                "translation": "E pele"
+                            },
+                            {
+                                "phrase": "May I come in?",
+                                "translation": "Ṣe mo le wọle?"
+                            },
+                            {
+                                "phrase": "Can you help me?",
+                                "translation": "Ṣe o le ran mi lọwọ?"
+                            },
+                            {
+                                "phrase": "I am sorry",
+                                "translation": "Ma binu"
+                            },
+                            {
+                                "phrase": "It's okay",
+                                "translation": "Ko si wahala"
+                            },
+                            {
+                                "phrase": "No problem",
+                                "translation": "Ko si wahala"
+                            },
+                            {
+                                "phrase": "Bless you (sneeze)",
+                                "translation": "Aaargh (no direct equivalent, often just a gesture or silence)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Object Vocabulary",
+                        "learning_data": [
+                            {
+                                "phrase": "Book",
+                                "translation": "Iwe"
+                            },
+                            {
+                                "phrase": "Pen",
+                                "translation": "Kálámù"
+                            },
+                            {
+                                "phrase": "Table",
+                                "translation": "Tabili"
+                            },
+                            {
+                                "phrase": "Chair",
+                                "translation": "Aga"
+                            },
+                            {
+                                "phrase": "House",
+                                "translation": "Ile"
+                            },
+                            {
+                                "phrase": "Car",
+                                "translation": "Mọto"
+                            },
+                            {
+                                "phrase": "Phone",
+                                "translation": "Foonu"
+                            },
+                            {
+                                "phrase": "Bag",
+                                "translation": "Apo"
+                            },
+                            {
+                                "phrase": "Water",
+                                "translation": "Omi"
+                            },
+                            {
+                                "phrase": "Key",
+                                "translation": "Kọkọrọ"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Basic food and drinks",
+                        "learning_data": [
+                            {
+                                "phrase": "Water",
+                                "translation": "Omi"
+                            },
+                            {
+                                "phrase": "Food",
+                                "translation": "Ounje"
+                            },
+                            {
+                                "phrase": "Bread",
+                                "translation": "Akara"
+                            },
+                            {
+                                "phrase": "Rice",
+                                "translation": "Iresi"
+                            },
+                            {
+                                "phrase": "Meat",
+                                "translation": "Eran"
+                            },
+                            {
+                                "phrase": "Fish",
+                                "translation": "Eja"
+                            },
+                            {
+                                "phrase": "Milk",
+                                "translation": "Wara"
+                            },
+                            {
+                                "phrase": "Tea",
+                                "translation": "Tii"
+                            },
+                            {
+                                "phrase": "Coffee",
+                                "translation": "Kofi"
+                            },
+                            {
+                                "phrase": "Fruit",
+                                "translation": "Eso"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Review and test",
+                        "learning_data": [
+                            {
+                                "phrase": "Review chapter 2 phrases",
+                                "translation": "Ṣe atunyẹwo awọn gbolohun ori 2"
+                            },
+                            {
+                                "phrase": "Count to ten",
+                                "translation": "Ka lati ọkan si mẹwa"
+                            },
+                            {
+                                "phrase": "Name 5 objects",
+                                "translation": "Darukọ awọn ohun marun"
+                            },
+                            {
+                                "phrase": "Ask for food",
+                                "translation": "Beere fun ounje"
+                            },
+                            {
+                                "phrase": "Translate 'thank you'",
+                                "translation": "Tumọ 'thank you'"
+                            },
+                            {
+                                "phrase": "What is 'Meji'?",
+                                "translation": "Kini 'Meji'?"
+                            },
+                            {
+                                "phrase": "How do you say 'water'?",
+                                "translation": "Bawo ni o ṣe sọ 'water'?"
+                            },
+                            {
+                                "phrase": "Identify the polite phrase",
+                                "translation": "Ṣe idanimọ gbolohun iwa rere"
+                            },
+                            {
+                                "phrase": "Match the number",
+                                "translation": "Baamu nọmba naa"
+                            },
+                            {
+                                "phrase": "Translate 'bread'",
+                                "translation": "Tumọ 'bread'"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "chapter_number": 3,
+                "topics": [
+                    {
+                        "name": "Describing and Locating",
+                        "learning_data": [
+                            {
+                                "phrase": "Big",
+                                "translation": "Nla"
+                            },
+                            {
+                                "phrase": "Small",
+                                "translation": "Kekere"
+                            },
+                            {
+                                "phrase": "Red",
+                                "translation": "Pupa"
+                            },
+                            {
+                                "phrase": "Blue",
+                                "translation": "Buluu"
+                            },
+                            {
+                                "phrase": "Good",
+                                "translation": "Daadaa"
+                            },
+                            {
+                                "phrase": "Bad",
+                                "translation": "Buruku"
+                            },
+                            {
+                                "phrase": "Here",
+                                "translation": "Nibi"
+                            },
+                            {
+                                "phrase": "There",
+                                "translation": "Nibe"
+                            },
+                            {
+                                "phrase": "Left",
+                                "translation": "Osi"
+                            },
+                            {
+                                "phrase": "Right",
+                                "translation": "Otun"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Basic Conjunctions",
+                        "learning_data": [
+                            {
+                                "phrase": "And",
+                                "translation": "Ati"
+                            },
+                            {
+                                "phrase": "But",
+                                "translation": "Ṣugbọn"
+                            },
+                            {
+                                "phrase": "Or",
+                                "translation": "Tabi"
+                            },
+                            {
+                                "phrase": "Because",
+                                "translation": "Nitori"
+                            },
+                            {
+                                "phrase": "If",
+                                "translation": "Ti"
+                            },
+                            {
+                                "phrase": "When",
+                                "translation": "Nigbati"
+                            },
+                            {
+                                "phrase": "So",
+                                "translation": "Nitorinaa"
+                            },
+                            {
+                                "phrase": "Although",
+                                "translation": "Bi o tilẹ jẹ pe"
+                            },
+                            {
+                                "phrase": "While",
+                                "translation": "Lakoko ti"
+                            },
+                            {
+                                "phrase": "Then",
+                                "translation": "Nigbana"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Prepositions of Place",
+                        "learning_data": [
+                            {
+                                "phrase": "In",
+                                "translation": "Ninu"
+                            },
+                            {
+                                "phrase": "On",
+                                "translation": "Lori"
+                            },
+                            {
+                                "phrase": "Under",
+                                "translation": "Labẹ"
+                            },
+                            {
+                                "phrase": "Next to",
+                                "translation": "Lẹgbẹẹ"
+                            },
+                            {
+                                "phrase": "Behind",
+                                "translation": "Lẹhin"
+                            },
+                            {
+                                "phrase": "In front of",
+                                "translation": "Ni iwaju"
+                            },
+                            {
+                                "phrase": "Between",
+                                "translation": "Laarin"
+                            },
+                            {
+                                "phrase": "Near",
+                                "translation": "Nitosi"
+                            },
+                            {
+                                "phrase": "Far",
+                                "translation": "Jinna"
+                            },
+                            {
+                                "phrase": "Above",
+                                "translation": "Loke"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Daily Activities",
+                        "learning_data": [
+                            {
+                                "phrase": "Wake up",
+                                "translation": "Ji"
+                            },
+                            {
+                                "phrase": "Eat",
+                                "translation": "Jeun"
+                            },
+                            {
+                                "phrase": "Drink",
+                                "translation": "Mu"
+                            },
+                            {
+                                "phrase": "Go to work",
+                                "translation": "Lọ si iṣẹ"
+                            },
+                            {
+                                "phrase": "Go to school",
+                                "translation": "Lọ si ile-iwe"
+                            },
+                            {
+                                "phrase": "Sleep",
+                                "translation": "Sun"
+                            },
+                            {
+                                "phrase": "Read",
+                                "translation": "Kawe"
+                            },
+                            {
+                                "phrase": "Write",
+                                "translation": "Kọwe"
+                            },
+                            {
+                                "phrase": "Cook",
+                                "translation": "Seun"
+                            },
+                            {
+                                "phrase": "Clean",
+                                "translation": "Nu"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Review and test",
+                        "learning_data": [
+                            {
+                                "phrase": "Review chapter 3 phrases",
+                                "translation": "Ṣe atunyẹwo awọn gbolohun ori 3"
+                            },
+                            {
+                                "phrase": "Describe an object",
+                                "translation": "Ṣe apejuwe ohun kan"
+                            },
+                            {
+                                "phrase": "Locate something",
+                                "translation": "Wa nkan kan"
+                            },
+                            {
+                                "phrase": "Use a conjunction",
+                                "translation": "Lo ọrọ asopọ kan"
+                            },
+                            {
+                                "phrase": "Practice prepositions",
+                                "translation": "Ṣe adaṣe awọn asọtẹlẹ"
+                            },
+                            {
+                                "phrase": "Talk about daily routine",
+                                "translation": "Sọ nipa iṣe ojoojumọ"
+                            },
+                            {
+                                "phrase": "What is 'Nla'?",
+                                "translation": "Kini 'Nla'?"
+                            },
+                            {
+                                "phrase": "How do you say 'and'?",
+                                "translation": "Bawo ni o ṣe sọ 'and'?"
+                            },
+                            {
+                                "phrase": "Where is the book?",
+                                "translation": "Nibo ni iwe wa?"
+                            },
+                            {
+                                "phrase": "Translate 'sleep'",
+                                "translation": "Tumọ 'sleep'"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "chapter_number": 4,
+                "topics": [
+                    {
+                        "name": "Further Learning",
+                        "learning_data": [
+                            {
+                                "phrase": "How to ask a question",
+                                "translation": "Bawo ni lati beere ibeere"
+                            },
+                            {
+                                "phrase": "Expressing opinions",
+                                "translation": "Sisọ ero"
+                            },
+                            {
+                                "phrase": "Future tense",
+                                "translation": "Akoko iwaju"
+                            },
+                            {
+                                "phrase": "Past tense",
+                                "translation": "Akoko ti o ti kọja"
+                            },
+                            {
+                                "phrase": "Complex sentences",
+                                "translation": "Gbolohun idiju"
+                            },
+                            {
+                                "phrase": "Cultural greetings",
+                                "translation": "Ikini aṣa"
+                            },
+                            {
+                                "phrase": "Common proverbs",
+                                "translation": "Owe ti o wọpọ"
+                            },
+                            {
+                                "phrase": "Idiomatic expressions",
+                                "translation": "Awọn ọrọ asọye"
+                            },
+                            {
+                                "phrase": "Travel phrases",
+                                "translation": "Awọn gbolohun irin-ajo"
+                            },
+                            {
+                                "phrase": "Shopping phrases",
+                                "translation": "Awọn gbolohun rira"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Swahili",
+        "chapters": [
+            {
+                "chapter_number": 1,
+                "topics": [
+                    {
+                        "name": "Use basic phrases",
+                        "learning_data": [
+                            {
+                                "phrase": "Hello",
+                                "translation": "Habari"
+                            },
+                            {
+                                "phrase": "Thank you",
+                                "translation": "Asante"
+                            },
+                            {
+                                "phrase": "Please",
+                                "translation": "Tafadhali"
+                            },
+                            {
+                                "phrase": "Excuse me",
+                                "translation": "Samahani"
+                            },
+                            {
+                                "phrase": "Yes",
+                                "translation": "Ndiyo"
+                            },
+                            {
+                                "phrase": "No",
+                                "translation": "Hapana"
+                            },
+                            {
+                                "phrase": "Okay",
+                                "translation": "Sawa"
+                            },
+                            {
+                                "phrase": "Sorry",
+                                "translation": "Pole"
+                            },
+                            {
+                                "phrase": "Help",
+                                "translation": "Msaada"
+                            },
+                            {
+                                "phrase": "I don't understand",
+                                "translation": "Sielewi"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Greet people and goodbye",
+                        "learning_data": [
+                            {
+                                "phrase": "Good morning",
+                                "translation": "Habari za asubuhi"
+                            },
+                            {
+                                "phrase": "Good afternoon",
+                                "translation": "Habari za mchana"
+                            },
+                            {
+                                "phrase": "Good evening",
+                                "translation": "Habari za jioni"
+                            },
+                            {
+                                "phrase": "Good night",
+                                "translation": "Usiku mwema"
+                            },
+                            {
+                                "phrase": "Goodbye",
+                                "translation": "Kwaheri"
+                            },
+                            {
+                                "phrase": "See you later",
+                                "translation": "Tutaonana baadaye"
+                            },
+                            {
+                                "phrase": "Welcome",
+                                "translation": "Karibu"
+                            },
+                            {
+                                "phrase": "How are you?",
+                                "translation": "Habari gani?"
+                            },
+                            {
+                                "phrase": "I am fine",
+                                "translation": "Nzuri sana"
+                            },
+                            {
+                                "phrase": "What is your name?",
+                                "translation": "Jina lako nani?"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Introduce yourself/myself",
+                        "learning_data": [
+                            {
+                                "phrase": "My name is...",
+                                "translation": "Jina langu ni..."
+                            },
+                            {
+                                "phrase": "I am from...",
+                                "translation": "Nimetoka..."
+                            },
+                            {
+                                "phrase": "Nice to meet you",
+                                "translation": "Nimefurahi kukutana nawe"
+                            },
+                            {
+                                "phrase": "I am a student",
+                                "translation": "Mimi ni mwanafunzi"
+                            },
+                            {
+                                "phrase": "I am a teacher",
+                                "translation": "Mimi ni mwalimu"
+                            },
+                            {
+                                "phrase": "How old are you?",
+                                "translation": "Una umri gani?"
+                            },
+                            {
+                                "phrase": "I am happy",
+                                "translation": "Nina furaha"
+                            },
+                            {
+                                "phrase": "I am tired",
+                                "translation": "Nimechoka"
+                            },
+                            {
+                                "phrase": "I like...",
+                                "translation": "Ninapenda..."
+                            },
+                            {
+                                "phrase": "I don't like...",
+                                "translation": "Sipendi..."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Refer to family members",
+                        "learning_data": [
+                            {
+                                "phrase": "Mother",
+                                "translation": "Mama"
+                            },
+                            {
+                                "phrase": "Father",
+                                "translation": "Baba"
+                            },
+                            {
+                                "phrase": "Brother",
+                                "translation": "Kaka"
+                            },
+                            {
+                                "phrase": "Sister",
+                                "translation": "Dada"
+                            },
+                            {
+                                "phrase": "Son",
+                                "translation": "Mwana (wa kiume)"
+                            },
+                            {
+                                "phrase": "Daughter",
+                                "translation": "Mwana (wa kike)"
+                            },
+                            {
+                                "phrase": "Grandmother",
+                                "translation": "Bibi"
+                            },
+                            {
+                                "phrase": "Grandfather",
+                                "translation": "Babu"
+                            },
+                            {
+                                "phrase": "Aunt",
+                                "translation": "Shangazi (father's sister), Mama mdogo (mother's younger sister), Mama mkubwa (mother's elder sister)"
+                            },
+                            {
+                                "phrase": "Uncle",
+                                "translation": "Mjomba (mother's brother), Baba mdogo (father's younger brother), Baba mkubwa (father's elder brother)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Review and test",
+                        "learning_data": [
+                            {
+                                "phrase": "Review chapter 1 phrases",
+                                "translation": "Kagua misemo ya sura ya 1"
+                            },
+                            {
+                                "phrase": "Test your knowledge",
+                                "translation": "Jaribu ujuzi wako"
+                            },
+                            {
+                                "phrase": "Practice greetings",
+                                "translation": "Fanya mazoezi ya salamu"
+                            },
+                            {
+                                "phrase": "Practice introductions",
+                                "translation": "Fanya mazoezi ya utambulisho"
+                            },
+                            {
+                                "phrase": "Practice family terms",
+                                "translation": "Fanya mazoezi ya maneno ya familia"
+                            },
+                            {
+                                "phrase": "Can you say hello?",
+                                "translation": "Unaweza kusema habari?"
+                            },
+                            {
+                                "phrase": "What does 'Asante' mean?",
+                                "translation": "'Asante' inamaanisha nini?"
+                            },
+                            {
+                                "phrase": "How do you say 'My name is...'?",
+                                "translation": "Unasemaje 'Jina langu ni...'?"
+                            },
+                            {
+                                "phrase": "Translate 'Father'",
+                                "translation": "Tafsiri 'Father'"
+                            },
+                            {
+                                "phrase": "Match the phrase",
+                                "translation": "Linganisha msemo"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "chapter_number": 2,
+                "topics": [
+                    {
+                        "name": "Numbers",
+                        "learning_data": [
+                            {
+                                "phrase": "One",
+                                "translation": "Moja"
+                            },
+                            {
+                                "phrase": "Two",
+                                "translation": "Mbili"
+                            },
+                            {
+                                "phrase": "Three",
+                                "translation": "Tatu"
+                            },
+                            {
+                                "phrase": "Four",
+                                "translation": "Nne"
+                            },
+                            {
+                                "phrase": "Five",
+                                "translation": "Tano"
+                            },
+                            {
+                                "phrase": "Six",
+                                "translation": "Sita"
+                            },
+                            {
+                                "phrase": "Seven",
+                                "translation": "Saba"
+                            },
+                            {
+                                "phrase": "Eight",
+                                "translation": "Nane"
+                            },
+                            {
+                                "phrase": "Nine",
+                                "translation": "Tisa"
+                            },
+                            {
+                                "phrase": "Ten",
+                                "translation": "Kumi"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Polite phrases",
+                        "learning_data": [
+                            {
+                                "phrase": "Please",
+                                "translation": "Tafadhali"
+                            },
+                            {
+                                "phrase": "Thank you very much",
+                                "translation": "Asante sana"
+                            },
+                            {
+                                "phrase": "You're welcome",
+                                "translation": "Karibu"
+                            },
+                            {
+                                "phrase": "Excuse me (passing by)",
+                                "translation": "Samahani"
+                            },
+                            {
+                                "phrase": "May I come in?",
+                                "translation": "Naweza kuingia?"
+                            },
+                            {
+                                "phrase": "Can you help me?",
+                                "translation": "Unaweza kunisaidia?"
+                            },
+                            {
+                                "phrase": "I am sorry",
+                                "translation": "Pole sana"
+                            },
+                            {
+                                "phrase": "It's okay",
+                                "translation": "Hakuna shida"
+                            },
+                            {
+                                "phrase": "No problem",
+                                "translation": "Hakuna matata"
+                            },
+                            {
+                                "phrase": "Bless you (sneeze)",
+                                "translation": "Afya!"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Object Vocabulary",
+                        "learning_data": [
+                            {
+                                "phrase": "Book",
+                                "translation": "Kitabu"
+                            },
+                            {
+                                "phrase": "Pen",
+                                "translation": "Kalamu"
+                            },
+                            {
+                                "phrase": "Table",
+                                "translation": "Meza"
+                            },
+                            {
+                                "phrase": "Chair",
+                                "translation": "Kiti"
+                            },
+                            {
+                                "phrase": "House",
+                                "translation": "Nyumba"
+                            },
+                            {
+                                "phrase": "Car",
+                                "translation": "Gari"
+                            },
+                            {
+                                "phrase": "Phone",
+                                "translation": "Simu"
+                            },
+                            {
+                                "phrase": "Bag",
+                                "translation": "Mfuko"
+                            },
+                            {
+                                "phrase": "Water",
+                                "translation": "Maji"
+                            },
+                            {
+                                "phrase": "Key",
+                                "translation": "Ufunguo"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Basic food and drinks",
+                        "learning_data": [
+                            {
+                                "phrase": "Water",
+                                "translation": "Maji"
+                            },
+                            {
+                                "phrase": "Food",
+                                "translation": "Chakula"
+                            },
+                            {
+                                "phrase": "Bread",
+                                "translation": "Mkate"
+                            },
+                            {
+                                "phrase": "Rice",
+                                "translation": "Wali"
+                            },
+                            {
+                                "phrase": "Meat",
+                                "translation": "Nyama"
+                            },
+                            {
+                                "phrase": "Fish",
+                                "translation": "Samaki"
+                            },
+                            {
+                                "phrase": "Milk",
+                                "translation": "Maziwa"
+                            },
+                            {
+                                "phrase": "Tea",
+                                "translation": "Chai"
+                            },
+                            {
+                                "phrase": "Coffee",
+                                "translation": "Kahawa"
+                            },
+                            {
+                                "phrase": "Fruit",
+                                "translation": "Matunda"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Review and test",
+                        "learning_data": [
+                            {
+                                "phrase": "Review chapter 2 phrases",
+                                "translation": "Kagua misemo ya sura ya 2"
+                            },
+                            {
+                                "phrase": "Count to ten",
+                                "translation": "Hesabu hadi kumi"
+                            },
+                            {
+                                "phrase": "Name 5 objects",
+                                "translation": "Taja vitu 5"
+                            },
+                            {
+                                "phrase": "Ask for food",
+                                "translation": "Omba chakula"
+                            },
+                            {
+                                "phrase": "Translate 'thank you'",
+                                "translation": "Tafsiri 'asante'"
+                            },
+                            {
+                                "phrase": "What is 'Mbili'?",
+                                "translation": "'Mbili' ni nini?"
+                            },
+                            {
+                                "phrase": "How do you say 'water'?",
+                                "translation": "Unasemaje 'maji'?"
+                            },
+                            {
+                                "phrase": "Identify the polite phrase",
+                                "translation": "Tambua msemo wa heshima"
+                            },
+                            {
+                                "phrase": "Match the number",
+                                "translation": "Linganisha nambari"
+                            },
+                            {
+                                "phrase": "Translate 'bread'",
+                                "translation": "Tafsiri 'mkate'"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "chapter_number": 3,
+                "topics": [
+                    {
+                        "name": "Describing and Locating",
+                        "learning_data": [
+                            {
+                                "phrase": "Big",
+                                "translation": "Kubwa"
+                            },
+                            {
+                                "phrase": "Small",
+                                "translation": "Ndogo"
+                            },
+                            {
+                                "phrase": "Red",
+                                "translation": "Nyekundu"
+                            },
+                            {
+                                "phrase": "Blue",
+                                "translation": "Bluu"
+                            },
+                            {
+                                "phrase": "Good",
+                                "translation": "Nzuri"
+                            },
+                            {
+                                "phrase": "Bad",
+                                "translation": "Mbaya"
+                            },
+                            {
+                                "phrase": "Here",
+                                "translation": "Hapa"
+                            },
+                            {
+                                "phrase": "There",
+                                "translation": "Pale"
+                            },
+                            {
+                                "phrase": "Left",
+                                "translation": "Kushoto"
+                            },
+                            {
+                                "phrase": "Right",
+                                "translation": "Kulia"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Basic Conjunctions",
+                        "learning_data": [
+                            {
+                                "phrase": "And",
+                                "translation": "Na"
+                            },
+                            {
+                                "phrase": "But",
+                                "translation": "Lakini"
+                            },
+                            {
+                                "phrase": "Or",
+                                "translation": "Au"
+                            },
+                            {
+                                "phrase": "Because",
+                                "translation": "Kwa sababu"
+                            },
+                            {
+                                "phrase": "If",
+                                "translation": "Kama"
+                            },
+                            {
+                                "phrase": "When",
+                                "translation": "Wakati"
+                            },
+                            {
+                                "phrase": "So",
+                                "translation": "Kwa hiyo"
+                            },
+                            {
+                                "phrase": "Although",
+                                "translation": "Ingawa"
+                            },
+                            {
+                                "phrase": "While",
+                                "translation": "Wakati"
+                            },
+                            {
+                                "phrase": "Then",
+                                "translation": "Kisha"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Prepositions of Place",
+                        "learning_data": [
+                            {
+                                "phrase": "In",
+                                "translation": "Ndani ya"
+                            },
+                            {
+                                "phrase": "On",
+                                "translation": "Juu ya"
+                            },
+                            {
+                                "phrase": "Under",
+                                "translation": "Chini ya"
+                            },
+                            {
+                                "phrase": "Next to",
+                                "translation": "Karibu na"
+                            },
+                            {
+                                "phrase": "Behind",
+                                "translation": "Nyuma ya"
+                            },
+                            {
+                                "phrase": "In front of",
+                                "translation": "Mbele ya"
+                            },
+                            {
+                                "phrase": "Between",
+                                "translation": "Kati ya"
+                            },
+                            {
+                                "phrase": "Near",
+                                "translation": "Karibu na"
+                            },
+                            {
+                                "phrase": "Far",
+                                "translation": "Mbali"
+                            },
+                            {
+                                "phrase": "Above",
+                                "translation": "Juu ya"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Daily Activities",
+                        "learning_data": [
+                            {
+                                "phrase": "Wake up",
+                                "translation": "Amka"
+                            },
+                            {
+                                "phrase": "Eat",
+                                "translation": "Kula"
+                            },
+                            {
+                                "phrase": "Drink",
+                                "translation": "Kunywa"
+                            },
+                            {
+                                "phrase": "Go to work",
+                                "translation": "Kwenda kazini"
+                            },
+                            {
+                                "phrase": "Go to school",
+                                "translation": "Kwenda shuleni"
+                            },
+                            {
+                                "phrase": "Sleep",
+                                "translation": "Lala"
+                            },
+                            {
+                                "phrase": "Read",
+                                "translation": "Soma"
+                            },
+                            {
+                                "phrase": "Write",
+                                "translation": "Andika"
+                            },
+                            {
+                                "phrase": "Cook",
+                                "translation": "Pika"
+                            },
+                            {
+                                "phrase": "Clean",
+                                "translation": "Safisha"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Review and test",
+                        "learning_data": [
+                            {
+                                "phrase": "Review chapter 3 phrases",
+                                "translation": "Kagua misemo ya sura ya 3"
+                            },
+                            {
+                                "phrase": "Describe an object",
+                                "translation": "Eleza kitu"
+                            },
+                            {
+                                "phrase": "Locate something",
+                                "translation": "Tafuta kitu"
+                            },
+                            {
+                                "phrase": "Use a conjunction",
+                                "translation": "Tumia kiunganishi"
+                            },
+                            {
+                                "phrase": "Practice prepositions",
+                                "translation": "Fanya mazoezi ya viunganishi vya mahali"
+                            },
+                            {
+                                "phrase": "Talk about daily routine",
+                                "translation": "Ongea kuhusu ratiba ya kila siku"
+                            },
+                            {
+                                "phrase": "What is 'Kubwa'?",
+                                "translation": "'Kubwa' ni nini?"
+                            },
+                            {
+                                "phrase": "How do you say 'and'?",
+                                "translation": "Unasemaje 'na'?"
+                            },
+                            {
+                                "phrase": "Where is the book?",
+                                "translation": "Kitabu kiko wapi?"
+                            },
+                            {
+                                "phrase": "Translate 'sleep'",
+                                "translation": "Tafsiri 'lala'"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "chapter_number": 4,
+                "topics": [
+                    {
+                        "name": "Further Learning",
+                        "learning_data": [
+                            {
+                                "phrase": "How to ask a question",
+                                "translation": "Jinsi ya kuuliza swali"
+                            },
+                            {
+                                "phrase": "Expressing opinions",
+                                "translation": "Kueleza maoni"
+                            },
+                            {
+                                "phrase": "Future tense",
+                                "translation": "Wakati ujao"
+                            },
+                            {
+                                "phrase": "Past tense",
+                                "translation": "Wakati uliopita"
+                            },
+                            {
+                                "phrase": "Complex sentences",
+                                "translation": "Sentensi tata"
+                            },
+                            {
+                                "phrase": "Cultural greetings",
+                                "translation": "Salamu za kitamaduni"
+                            },
+                            {
+                                "phrase": "Common proverbs",
+                                "translation": "Methali za kawaida"
+                            },
+                            {
+                                "phrase": "Idiomatic expressions",
+                                "translation": "Misemo"
+                            },
+                            {
+                                "phrase": "Travel phrases",
+                                "translation": "Misemo ya kusafiri"
+                            },
+                            {
+                                "phrase": "Shopping phrases",
+                                "translation": "Misemo ya ununuzi"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
