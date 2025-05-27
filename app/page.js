@@ -233,7 +233,7 @@ export default function Home() {
           {/* Heading and Arrow grouped */}
           <h1 className="text-4xl font-bold">hey, you can start now!</h1>
           <div className="flex items-center ">
-            {/* Arrow Image pointing to the button */}
+            <h1>new feature</h1>
             <Image
               src="/drawing.svg"
               alt="Arrow pointing to Get Started"
