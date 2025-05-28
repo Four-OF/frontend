@@ -11,6 +11,7 @@ const customJestConfig = {
     // Mock stylesheets
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     '^lucide-react$': '<rootDir>/__mocks__/lucide-react.js',
+    '^@phosphor-icons/react$': '<rootDir>/__mocks__/phosphor-icons.js',
   },
   testEnvironment: 'jsdom',
 };
