@@ -339,7 +339,9 @@ export default function Welcome() {
       }
     } else if (showSection === 'results') {
       // Get the current module ID from localStorage
-      const storedProgress = localStorage.getItem("quizProgress");
+      if (typeof window !== 'undefined') {
+        const storedProgress = localStorage.getItem("quizProgress");
+      }
       let currentModuleId = '';
 
       if (storedProgress) {
@@ -370,8 +372,10 @@ export default function Welcome() {
         currentModuleId: nextModuleId,
       };
 
-      localStorage.setItem("quizProgress", JSON.stringify(updatedProgress));
-
+      // Only access localStorage in useEffect or after component mounts
+      if (typeof window !== 'undefined') {
+        localStorage.setItem("quizProgress", JSON.stringify(updatedProgress));
+      }
       // Navigate to results with module ID
       router.push(`/class/lesson/results?module=${currentModuleId}`);
     }

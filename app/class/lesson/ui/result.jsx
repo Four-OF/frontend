@@ -12,39 +12,42 @@ function ResultsPage({ userName = "FourOf", stars = 10, score = 100, vocabulary 
     const moduleId = searchParams.get('module');
 
     const handleNext = () => {
-        const storedProgress = localStorage.getItem("quizProgress");
+        // Check if localStorage is available (client-side)
+        if (typeof window !== 'undefined' && window.localStorage) {
+            const storedProgress = localStorage.getItem("quizProgress");
 
-        if (storedProgress) {
-            const progress = JSON.parse(storedProgress);
+            if (storedProgress) {
+                const progress = JSON.parse(storedProgress);
 
-            // If no moduleId from URL, get the current module from progress
-            const currentModuleId = moduleId || progress.currentModuleId;
+                // If no moduleId from URL, get the current module from progress
+                const currentModuleId = moduleId || progress.currentModuleId;
 
-            // Find the current module index
-            const currentModuleIndex = progress.modules.findIndex((module) => module.id === currentModuleId);
+                // Find the current module index
+                const currentModuleIndex = progress.modules.findIndex((module) => module.id === currentModuleId);
 
-            if (currentModuleIndex !== -1) {
-                const updatedModules = [...progress.modules];
+                if (currentModuleIndex !== -1) {
+                    const updatedModules = [...progress.modules];
 
-                // Mark current module as completed
-                updatedModules[currentModuleIndex].status = "completed";
+                    // Mark current module as completed
+                    updatedModules[currentModuleIndex].status = "completed";
 
-                // Set next module as in-progress if available
-                if (currentModuleIndex < updatedModules.length - 1) {
-                    updatedModules[currentModuleIndex + 1].status = "in-progress";
-                    progress.currentModuleId = updatedModules[currentModuleIndex + 1].id;
-                } else {
-                    // All modules completed
-                    progress.currentModuleId = null;
+                    // Set next module as in-progress if available
+                    if (currentModuleIndex < updatedModules.length - 1) {
+                        updatedModules[currentModuleIndex + 1].status = "in-progress";
+                        progress.currentModuleId = updatedModules[currentModuleIndex + 1].id;
+                    } else {
+                        // All modules completed
+                        progress.currentModuleId = null;
+                    }
+
+                    // Update the progress object
+                    progress.modules = updatedModules;
+
+                    // Save to localStorage
+                    localStorage.setItem("quizProgress", JSON.stringify(progress));
+
+                    console.log("Progress updated:", progress); // Debug log
                 }
-
-                // Update the progress object
-                progress.modules = updatedModules;
-
-                // Save to localStorage
-                localStorage.setItem("quizProgress", JSON.stringify(progress));
-
-                console.log("Progress updated:", progress); // Debug log
             }
         }
 
@@ -56,7 +59,7 @@ function ResultsPage({ userName = "FourOf", stars = 10, score = 100, vocabulary 
     // };
 
     return (
-        
+
         <div className="flex flex-col items-center justify-center min-h-screen font-sans">
             {/* Main content card */}
             <div className="w-full max-w-md text-center ">
@@ -94,7 +97,7 @@ function ResultsPage({ userName = "FourOf", stars = 10, score = 100, vocabulary 
                         <span className="text-sm text-gray-500 mb-1">Score</span>
                         <div className="flex items-center text-lg font-semibold text-gray-700">
                             {score}%
-                            
+
                             <TrendUp size={24} className="ml-1 text-green-500" />
                         </div>
                     </div>
@@ -122,11 +125,11 @@ function ResultsPage({ userName = "FourOf", stars = 10, score = 100, vocabulary 
                         </div>
                         <p className="text-gray-600 ml-7">{vocabulary.english}</p> {/* Align with text above */}
                     </div>
-                    
+
                 </div>
 
             </div>
-            
+
             <div className="w-full max-w-md mt-6">
                 <Link href="/class/phrasebook" className="w-full bg-violet-600 hover:bg-violet-700 text-white font-semibold py-3 px-4 rounded-lg transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-opacity-50"> {/* Added focus state */}
                     Review
