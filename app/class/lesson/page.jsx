@@ -112,7 +112,7 @@ const joinWords = [
   { id: 1, word: "kushɛ", translation: "Hello" },
 ]
 
-export default function Welcome() {
+ function Welcome() {
   const router = useRouter();
   // Modified: Initialize currentPage to 1 and use it for progress bar
   const [currentPage, setCurrentPage] = useState(1);
@@ -601,7 +601,6 @@ export default function Welcome() {
 
   return (
     <ErrorBoundary>
-      <Suspense fallback={<>Loading...</>}>
       <div className="h-screen flex flex-col w-full">
         {/* Top Content */}
         {(showSection === 'card' || showSection === 'putin' || showSection === 'cards' || showSection === 'join' || showSection === 'Fill' || showSection === 'match') && (
@@ -672,7 +671,14 @@ export default function Welcome() {
           </nav>
         )}
       </div>
-      </Suspense>
     </ErrorBoundary>
+  );
+}
+
+export default function RootLayoutWrapper() {
+  return (
+    <Suspense fallback={<>loading...</>}>
+      <Welcome />
+    </Suspense>
   );
 }

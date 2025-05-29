@@ -60,7 +60,6 @@ function ResultsPage({ userName = "FourOf", stars = 10, score = 100, vocabulary 
     // };
 
     return (
-        <Suspense fallback={<>Loading...</>}>
             <div className="flex flex-col items-center justify-center min-h-screen font-sans">
                 {/* Main content card */}
                 <div className="w-full max-w-md text-center ">
@@ -146,11 +145,13 @@ function ResultsPage({ userName = "FourOf", stars = 10, score = 100, vocabulary 
                 </button>
 
             </div>
-        </Suspense>
     );
 }
 
 export default function App() {
-
-    return <ResultsPage />;
+    return (
+        <Suspense fallback={<>loading...</>}>
+            <ResultsPage />;
+        </Suspense>
+    );
 }

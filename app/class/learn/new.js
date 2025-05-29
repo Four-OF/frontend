@@ -50,7 +50,7 @@ const languageNames = {
 };
 
 
-export default function RootLayout({ children }) {
+ function RootLayout({ children }) {
   const pathname = usePathname();
   const router = useRouter();
   //const [isLoading, setIsLoading] = useState(true);
@@ -341,7 +341,6 @@ export default function RootLayout({ children }) {
     <ClassDataContext.Provider value={contextValue}>
       {/* {loading ? <LottieLoader animationType="another" /> : ( */}
       {/* <> */}
-      <Suspense fallback={<>Loading</>}>
       {
         isLessonPage ? (
           <main className="flex-1 md:ml-0 lg:ml-0 lg:mr-0 min-h-screen" >
@@ -465,7 +464,17 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         )}
-        </Suspense>
+
     </ClassDataContext.Provider>
+  );
+}
+
+export default function RootLayoutWrapper({ children }) {
+  return (
+    <Suspense fallback={<>loading...</>}>
+      <RootLayout>
+        {children}
+      </RootLayout>
+    </Suspense>
   );
 }

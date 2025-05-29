@@ -208,7 +208,7 @@ function LearningPathStep({ module, index, arrayIndex, displayIndex, currentInde
   );
 }
 
-export default function LearningPathProgress({
+ function LearningPathProgress({
   //modules = defaultModules,
   //initialModules = defaultModules,
   title = "Web Development Fundamentals",
@@ -424,7 +424,6 @@ const loadProgress = () => {
   // )
 
   return (
-    <Suspense fallback={<>Loading</>}>
     <div className="w-full max-w-4xl mx-auto pt-10 overflow-hidden">
       <button
         onClick={handleResetProgress}
@@ -477,10 +476,17 @@ const loadProgress = () => {
         </div>
       </div>
     </div>
-    </Suspense>
   )
 }
 
+
+export default function RootLayoutWrapper() {
+  return (
+    <Suspense fallback={<>loading...</>}>
+      <LearningPathProgress />
+    </Suspense>
+  );
+}
 // Sample data (remains the same)
 // const defaultModules = [
 //   {
