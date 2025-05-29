@@ -1,11 +1,10 @@
+"use client";
+
 import React from 'react';
-// Make sure to install lucide-react: npm install lucide-react
-//import { Star1, TrendingUp, Volume2, BookOpen1 } from 'lucide-react';
 import { Star, TrendUp, SpeakerHigh, BookOpen } from '@phosphor-icons/react';
 import Link from 'next/link';
 import { useSearchParams, useRouter } from 'next/navigation';
 
-// Main component for the results page
 function ResultsPage({ userName = "FourOf", stars = 10, score = 100, vocabulary = { spanish: "Wo din de sɛn?", english: "What's your name?" } }) {
 
     const router = useRouter();
@@ -57,10 +56,10 @@ function ResultsPage({ userName = "FourOf", stars = 10, score = 100, vocabulary 
     // };
 
     return (
-        // Outer container to center content and manage padding
+        
         <div className="flex flex-col items-center justify-center min-h-screen font-sans">
             {/* Main content card */}
-            <div className="w-full max-w-md text-center "> {/* Added subtle shadow */}
+            <div className="w-full max-w-md text-center ">
 
                 {/* Illustration at the top */}
                 {/* <div className="mb-3 flex justify-center"> */}
@@ -95,7 +94,7 @@ function ResultsPage({ userName = "FourOf", stars = 10, score = 100, vocabulary 
                         <span className="text-sm text-gray-500 mb-1">Score</span>
                         <div className="flex items-center text-lg font-semibold text-gray-700">
                             {score}%
-                            {/* Keeping green for score trend, can be changed */}
+                            
                             <TrendUp size={24} className="ml-1 text-green-500" />
                         </div>
                     </div>
@@ -123,11 +122,11 @@ function ResultsPage({ userName = "FourOf", stars = 10, score = 100, vocabulary 
                         </div>
                         <p className="text-gray-600 ml-7">{vocabulary.english}</p> {/* Align with text above */}
                     </div>
-                    {/* Add more vocabulary items here if needed */}
+                    
                 </div>
 
             </div>
-            {/* Continue Button - Placed outside the main card, using violet-600 */}
+            
             <div className="w-full max-w-md mt-6">
                 <Link href="/class/phrasebook" className="w-full bg-violet-600 hover:bg-violet-700 text-white font-semibold py-3 px-4 rounded-lg transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-opacity-50"> {/* Added focus state */}
                     Review
@@ -146,8 +145,7 @@ function ResultsPage({ userName = "FourOf", stars = 10, score = 100, vocabulary 
     );
 }
 
-// Default export for the App component
 export default function App() {
-    // You can pass dynamic data via props here if needed
+
     return <ResultsPage />;
 }
