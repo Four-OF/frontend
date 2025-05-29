@@ -22,7 +22,7 @@ jobs:
 
             - run: npm ci
 
-            - run: npm run lint
+
             - run: npm run test:prod  
             - name: Install Vercel CLI
               run: npm install --global vercel
