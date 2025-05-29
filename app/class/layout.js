@@ -22,8 +22,8 @@ const ClassDataContext = createContext({
   // NEW: Add topic-related context
   selectedChapter: null,
   selectedTopic: null,
-  setSelectedChapter: () => {},
-  setSelectedTopic: () => {},
+  setSelectedChapter: () => { },
+  setSelectedTopic: () => { },
 });
 
 export const useClassData = () => useContext(ClassDataContext);
@@ -96,7 +96,7 @@ export default function RootLayout({ children }) {
         default:
           setAuthError('Authentication failed. Please try again.');
       }
-      
+
       // Clear error after 5 seconds
       setTimeout(() => setAuthError(null), 5000);
     }
@@ -110,8 +110,11 @@ export default function RootLayout({ children }) {
       try {
         // const token = localStorage.getItem('jwtToken');
         //const token = getTokenFromCookie('jwtToken');
-         // Add a small delay to ensure cookies are properly set after OAuth redirect
-        if (pathname === '/class' && document.referrer.includes('/auth/')) {
+        // Add a small delay to ensure cookies are properly set after OAuth redirect
+        if (
+          typeof document !== 'undefined' &&
+          pathname === '/class' && document.referrer.includes('/auth/')
+        ) {
           await new Promise(resolve => setTimeout(resolve, 1000));
         }
 
@@ -134,14 +137,14 @@ export default function RootLayout({ children }) {
           setUserEmail(userInfo.email);
           setUserLanguage(userInfo.language);
           setUserCreatedAt(userInfo.createdAt);
-          
+
           console.log('User Data:', userInfo.id, userInfo.name, userInfo.email, userInfo.language, userInfo.createdAt);
         } else {
           // Authentication failed
           console.log('Authentication failed');
           setIsAuthenticated(false);
-          
-          
+
+
           // Only redirect to login if we're accessing a protected route and not already on auth routes
           if (!pathname.startsWith('/auth/') && pathname !== '/') {
             router.push('/auth/login');
@@ -192,7 +195,7 @@ export default function RootLayout({ children }) {
         //   console.log('Redirecting to login...');
         //   router.push('/auth/login');
         // }
-         // Only redirect for protected routes
+        // Only redirect for protected routes
         if (!pathname.startsWith('/auth/') && pathname !== '/') {
           router.push('/auth/login');
         }
@@ -206,7 +209,7 @@ export default function RootLayout({ children }) {
     //fetchUserData();
   }, [pathname, router])
 
-   // --- NEW CODE START ---
+  // --- NEW CODE START ---
   // Effect to fetch language data when userLanguage is set
   useEffect(() => {
     const fetchLanguageSpecificData = async () => {
