@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, createContext, useContext } from 'react';
+import React, { Suspense, useState, useEffect, createContext, useContext } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 //import { Star, ArrowLeft, Plus } from 'lucide-react';
@@ -341,6 +341,7 @@ export default function RootLayout({ children }) {
     <ClassDataContext.Provider value={contextValue}>
       {/* {loading ? <LottieLoader animationType="another" /> : ( */}
       {/* <> */}
+      <Suspense fallback={<>Loading</>}>
       {
         isLessonPage ? (
           <main className="flex-1 md:ml-0 lg:ml-0 lg:mr-0 min-h-screen" >
@@ -464,6 +465,7 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         )}
+        </Suspense>
     </ClassDataContext.Provider>
   );
 }

@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react'; // ⬅️ Add this at the top
+import { Suspense, useState, useEffect } from 'react'; // ⬅️ Add this at the top
 import { useSearchParams, useRouter } from 'next/navigation';
 
 import Link from 'next/link';
@@ -471,6 +471,7 @@ export default function LearningPathProgress({
   // )
 
   return (
+    <Suspense fallback={<>Loading</>}>
     <div className="w-full max-w-4xl mx-auto pt-10 overflow-hidden">
       <button
         onClick={handleResetProgress}
@@ -523,5 +524,6 @@ export default function LearningPathProgress({
         </div>
       </div>
     </div>
+    </Suspense>
   )
 }
