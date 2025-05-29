@@ -601,6 +601,7 @@ export default function Welcome() {
 
   return (
     <ErrorBoundary>
+      <Suspense fallback={<>Loading...</>}>
       <div className="h-screen flex flex-col w-full">
         {/* Top Content */}
         {(showSection === 'card' || showSection === 'putin' || showSection === 'cards' || showSection === 'join' || showSection === 'Fill' || showSection === 'match') && (
@@ -671,6 +672,7 @@ export default function Welcome() {
           </nav>
         )}
       </div>
+      </Suspense>
     </ErrorBoundary>
   );
 }

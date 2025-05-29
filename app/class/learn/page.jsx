@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react'; // ⬅️ Add this at the top
+import { Suspense, useState, useEffect } from 'react'; // ⬅️ Add this at the top
 import { useSearchParams, useRouter } from 'next/navigation';
 
 import Link from 'next/link';
@@ -424,6 +424,7 @@ const loadProgress = () => {
   // )
 
   return (
+    <Suspense fallback={<>Loading</>}>
     <div className="w-full max-w-4xl mx-auto pt-10 overflow-hidden">
       <button
         onClick={handleResetProgress}
@@ -476,6 +477,7 @@ const loadProgress = () => {
         </div>
       </div>
     </div>
+    </Suspense>
   )
 }
 
