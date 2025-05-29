@@ -4,7 +4,7 @@ import React, { Suspense } from 'react';
 import { Star, TrendUp, SpeakerHigh, BookOpen } from '@phosphor-icons/react';
 import Link from 'next/link';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { Suspense } from 'react';
+
 
 function ResultsPage({ userName = "FourOf", stars = 10, score = 100, vocabulary = { spanish: "Wo din de sɛn?", english: "What's your name?" } }) {
 
