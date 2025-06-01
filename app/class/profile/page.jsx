@@ -9,7 +9,7 @@ import { useClassData } from '../layout'; // Or import { ClassDataContext } from
 export default function ProfilePage() {
   const router = useRouter();
 
-  const { userId, userName, userEmail, userCreatedAt, refreshData } = useClassData();
+  const { userId, userName, userEmail, userCreatedAt, userLanguage, refreshData } = useClassData();
 
   // Convert userCreatedAt to a readable string date
   const formattedDate = userCreatedAt ? new Date(userCreatedAt).toLocaleDateString('en-US', {
@@ -17,12 +17,18 @@ export default function ProfilePage() {
     month: 'long',
     day: 'numeric'
   }) : 'N/A';
-  
- const handleLogout = () => {
-    // Clear authentication data
-    localStorage.removeItem('jwtToken');
-    localStorage.removeItem('selectedLanguage');
-    
+
+  const handleLogout = () => {
+    // Check if localStorage is available (client-side)
+    if (typeof window !== 'undefined' && window.localStorage) {
+      try {
+        // Clear authentication data
+        localStorage.removeItem('jwtToken');
+        localStorage.removeItem('selectedLanguage');
+      } catch (error) {
+        console.error('Error clearing localStorage:', error);
+      }
+    }
     // Redirect to login page
     router.push('/');
   };
@@ -50,7 +56,7 @@ export default function ProfilePage() {
         <div className="border-2 border-violet-200 bg-violet-50 px-4 py-2 rounded-lg 
                        inline-flex items-center transition-colors hover:bg-violet-100 
                        text-violet-900 peer">
-          <span className="font-medium">Hello</span>
+          <span className="font-medium">{userLanguage}</span>
         </div>
       </div>
       <div className="border-b border-violet-200 w-full"></div>

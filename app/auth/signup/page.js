@@ -1,11 +1,11 @@
-"use client";
-import React, { useRef, useState, useEffect } from 'react';
+'use client';
+
+import React, { Suspense, useRef, useState, useEffect } from 'react';
 import { CaretLeft } from '@phosphor-icons/react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Input } from "@heroui/input";
 import { Button } from "@heroui/button";
-
 
 export const EyeSlashFilledIcon = (props) => {
     return (
@@ -67,7 +67,7 @@ export const EyeFilledIcon = (props) => {
     );
 };
 
-const FloatingInput = ({ label, type, id, value, onChange }) => {
+const FloatingInput = ({ label, type, id, value, onChange, endContent }) => {
     return (
         <Input
             isRequired
@@ -75,17 +75,19 @@ const FloatingInput = ({ label, type, id, value, onChange }) => {
             size="lg"
             type={type}
             variant="faded"
-            value={value} // Bind the value prop to make the input controlled
-            onValueChange={onChange} // Use onValueChange to handle input changes
-        //endContent={endContent} // Pass endContent for password visibility toggle
+            value={value}
+            onValueChange={onChange}
+            endContent={endContent}
         />
     );
 };
 
-const SignupPage = () => {
+// Separate component that uses useSearchParams
+const SignupForm = () => {
     const router = useRouter();
     const searchParams = useSearchParams();
     const [isVisible, setIsVisible] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     // Extract query parameters
     const language = searchParams.get("language");
@@ -97,33 +99,40 @@ const SignupPage = () => {
         name: '',
         email: '',
         password: '',
-        //confirmPassword: ''
     });
 
     const [error, setError] = useState('');
 
-    // Updated handleSubmit to include survey submission
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setError("");
+        setIsLoading(true);
 
         // Validate signup form data
-        if (!formData.name || !formData.email || !formData.password) {
+        if (!formData.name.trim() || !formData.email.trim() || !formData.password.trim()) {
             setError("Name, email, and password are required");
+            setIsLoading(false);
             return;
         }
 
         if (!/\S+@\S+\.\S+/.test(formData.email)) {
             setError("Please enter a valid email address");
+            setIsLoading(false);
+            return;
+        }
+
+        if (formData.password.length < 6) {
+            setError("Password must be at least 6 characters long");
+            setIsLoading(false);
             return;
         }
 
         // Validate survey data
         if (!language || !page1Answer || !page2Answer || !page3Answer) {
             setError("Survey data is incomplete");
+            setIsLoading(false);
             return;
         }
-
-        setError("");
 
         try {
             // Submit signup data
@@ -132,16 +141,13 @@ const SignupPage = () => {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                credentials: 'include', // IMPORTANT: allow cookies to be included
+                credentials: 'include',
                 body: JSON.stringify(formData),
-
             });
 
-            if (signupResponse.ok) {
-                router.push("/class");
-            } else {
+            if (!signupResponse.ok) {
                 const data = await signupResponse.json();
-                setError(data.message || "Signup failed");
+                throw new Error(data.message || "Signup failed");
             }
 
             // Prepare survey data
@@ -178,40 +184,47 @@ const SignupPage = () => {
             const surveyResult = await surveyResponse.json();
             console.log("API Response (Survey):", surveyResult);
 
-            // Step 3: Redirect to class page after both operations succeed
-            // router.push("/class");
+            // Redirect to class page after both operations succeed
+            router.push("/class");
 
         } catch (err) {
-            // Unified error handling for both API calls
-            setError("An error occurred. Please try again.");
+            setError(err.message || "An error occurred. Please try again.");
             console.error("Error:", err);
+        } finally {
+            setIsLoading(false);
         }
     };
 
-    // Updated handleInputChange to work with onValueChange
     const handleInputChange = (field) => (value) => {
         setFormData({ ...formData, [field]: value });
     };
 
     const toggleVisibility = () => setIsVisible(!isVisible);
 
-
     const API_URL = 'http://localhost:8080';
 
     const handleOAuthLogin = (provider) => {
-        console.log(`Logging in with facebook...`);
-        window.location.href = `${API_URL}/auth/${provider}`;
+        console.log(`Logging in with ${provider}...`);
+        // Include survey data in OAuth redirect
+        const queryParams = new URLSearchParams({
+            language: language || '',
+            page1Answer: page1Answer || '',
+            page2Answer: page2Answer || '',
+            page3Answer: page3Answer || '',
+        });
+        window.location.href = `${API_URL}/auth/${provider}?${queryParams.toString()}`;
     };
 
     return (
-        // Main container with responsive padding and flex properties
         <div className="flex flex-col min-h-screen bg-gray-50 p-4 sm:p-6 lg:p-8">
             <button
-                className="flex items-center justify-center h-8 w-8 bg-gray-200 rounded-full disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex items-center justify-center h-8 w-8 bg-gray-200 rounded-full hover:bg-gray-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 onClick={() => router.back()}
+                disabled={isLoading}
             >
                 <CaretLeft size={28} />
             </button>
+            
             {/* Main content container (Title and Form) - centered */}
             <div className="w-full max-w-sm space-y-5 mx-auto flex-grow flex flex-col justify-center">
                 <h1 className="text-3xl md:text-4xl font-semibold text-gray-900 text-center mb-6 md:mb-8">
@@ -221,8 +234,11 @@ const SignupPage = () => {
                 {/* Form with responsive spacing */}
                 <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                     {error && (
-                        <div className="text-red-500 text-sm md:text-base text-center p-3 rounded-lg bg-red-50">{error}</div>
+                        <div className="text-red-500 text-sm md:text-base text-center p-3 rounded-lg bg-red-50 border border-red-200">
+                            {error}
+                        </div>
                     )}
+                    
                     <FloatingInput
                         label="Name"
                         id="name"
@@ -230,6 +246,7 @@ const SignupPage = () => {
                         value={formData.name}
                         onChange={handleInputChange("name")}
                     />
+                    
                     <FloatingInput
                         label="Email"
                         type="email"
@@ -237,6 +254,7 @@ const SignupPage = () => {
                         value={formData.email}
                         onChange={handleInputChange("email")}
                     />
+                    
                     <FloatingInput
                         label="Password"
                         endContent={
@@ -258,22 +276,33 @@ const SignupPage = () => {
                         value={formData.password}
                         onChange={handleInputChange("password")}
                     />
-                    <Button size="lg" type="submit" className="w-full bg-violet-600">
-                        Create Account
+                    
+                    <Button 
+                        size="lg" 
+                        type="submit" 
+                        className="w-full bg-violet-600 hover:bg-violet-700 text-white"
+                        disabled={isLoading}
+                    >
+                        {isLoading ? "Creating Account..." : "Create Account"}
                     </Button>
                 </form>
-                <div className="flex flex-col  items-center justify-between mt-4 gap-4">
-                    <p>or</p>
+                
+                <div className="flex flex-col items-center justify-between mt-4 gap-4">
+                    <p className="text-gray-500">or</p>
                     <div className="flex flex-row w-full gap-4">
-                        <Button size="lg" type="button" className="w-full bg-violet-50 hover:bg-violet-100 border border-violet-200 text-violet-600"
+                        <Button 
+                            size="lg" 
+                            type="button" 
+                            className="w-full bg-violet-50 hover:bg-violet-100 border border-violet-200 text-violet-600"
                             onPress={() => handleOAuthLogin('google')}
+                            disabled={isLoading}
                         >
                             <div className="flex items-center gap-2">
                                 {/* Google SVG */}
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 48 48"
-                                    className="w-5 h-5 text-violet-600"
+                                    className="w-5 h-5"
                                     aria-hidden="true"
                                 >
                                     <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
@@ -285,8 +314,13 @@ const SignupPage = () => {
                             </div>
                         </Button>
 
-                        <Button size="lg" type="button" className="w-full bg-violet-700 hover:bg-violet-600 text-white"
-                            onClick={() => handleOAuthLogin('facebook')}>
+                        <Button 
+                            size="lg" 
+                            type="button" 
+                            className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                            onPress={() => handleOAuthLogin('facebook')}
+                            disabled={isLoading}
+                        >
                             <div className="flex items-center gap-2">
                                 {/* Facebook SVG */}
                                 <svg
@@ -324,6 +358,22 @@ const SignupPage = () => {
                 </div>
             </div>
         </div>
+    );
+};
+
+// Main component that wraps SignupForm in Suspense
+const SignupPage = () => {
+    return (
+        <Suspense fallback={
+            <div className="flex items-center justify-center min-h-screen bg-gray-50">
+                <div className="text-center">
+                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-violet-600 mx-auto"></div>
+                    <p className="mt-2 text-gray-600">Loading...</p>
+                </div>
+            </div>
+        }>
+            <SignupForm />
+        </Suspense>
     );
 };
 

@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react'; // ⬅️ Add this at the top
+import { Suspense, useState, useEffect } from 'react'; // ⬅️ Add this at the top
 import { useSearchParams, useRouter } from 'next/navigation';
 
 import Link from 'next/link';
@@ -208,7 +208,7 @@ function LearningPathStep({ module, index, arrayIndex, displayIndex, currentInde
   );
 }
 
-export default function LearningPathProgress({
+ function LearningPathProgress({
   //modules = defaultModules,
   //initialModules = defaultModules,
   title = "Web Development Fundamentals",
@@ -524,4 +524,12 @@ export default function LearningPathProgress({
       </div>
     </div>
   )
+}
+
+export default function RootLayoutWrapper() {
+  return (
+    <Suspense fallback={<>loading...</>}>
+      <LearningPathProgress />
+    </Suspense>
+  );
 }

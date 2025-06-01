@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react'; // ⬅️ Add this at the top
+import { Suspense, useState, useEffect } from 'react'; // ⬅️ Add this at the top
 import { useSearchParams, useRouter } from 'next/navigation';
 
 import Link from 'next/link';
@@ -208,7 +208,7 @@ function LearningPathStep({ module, index, arrayIndex, displayIndex, currentInde
   );
 }
 
-export default function LearningPathProgress({
+ function LearningPathProgress({
   //modules = defaultModules,
   //initialModules = defaultModules,
   title = "Web Development Fundamentals",
@@ -278,26 +278,35 @@ export default function LearningPathProgress({
   //   return userLanguage ? `quizProgress_${userLanguage}` : 'quizProgress';
   // };
   // Function to load progress from localStorage
-  const loadProgress = () => {
-    // const storedProgress = localStorage.getItem(getStorageKey());
-    const storedProgress = localStorage.getItem('quizProgress');
-    if (storedProgress) {
-      const progress = JSON.parse(storedProgress);
-      setModules(progress.modules || defaultModules);
-      setCurrentModuleId(progress.currentModuleId || defaultModules[0]?.id || "");
-    } else {
-      setModules(defaultModules);
-      setCurrentModuleId(defaultModules[0]?.id || "");
-      const initialProgress = {
-        modules: defaultModules,
-        currentModuleId: defaultModules[0]?.id || "",
-      };
-      // localStorage.setItem(getStorageKey(), JSON.stringify(initialProgress));
-      localStorage.setItem('quizProgress', JSON.stringify(initialProgress));
-    }
-  };
-
-// Initialize quiz progress on component mount
+  useEffect(() => {
+    
+    // Only load progress on client-side
+    loadProgress();
+  }, []); // Empty dependency array means this runs once on mount
+const loadProgress = () => {
+      try {
+        const storedProgress = localStorage.getItem('quizProgress');
+        if (storedProgress) {
+          const progress = JSON.parse(storedProgress);
+          setModules(progress.modules || defaultModules);
+          setCurrentModuleId(progress.currentModuleId || defaultModules[0]?.id || "");
+        } else {
+          setModules(defaultModules);
+          setCurrentModuleId(defaultModules[0]?.id || "");
+          const initialProgress = {
+            modules: defaultModules,
+            currentModuleId: defaultModules[0]?.id || "",
+          };
+          localStorage.setItem('quizProgress', JSON.stringify(initialProgress));
+        }
+      } catch (error) {
+        console.error('Error loading progress from localStorage:', error);
+        // Fallback to default values if localStorage fails
+        setModules(defaultModules);
+        setCurrentModuleId(defaultModules[0]?.id || "");
+      }
+    };
+  // Initialize quiz progress on component mount
   useEffect(() => {
     if (!initialized) {
       loadProgress();
@@ -315,7 +324,7 @@ export default function LearningPathProgress({
     return () => window.removeEventListener('focus', handleFocus);
   }, []);
 
- // Check for URL parameter that indicates completion
+  // Check for URL parameter that indicates completion
   useEffect(() => {
     const completedModule = searchParams.get('complete');
     if (completedModule) {
@@ -388,7 +397,10 @@ export default function LearningPathProgress({
       currentModuleId: modulesToReset[0]?.id || "",
     };
     // localStorage.setItem(getStorageKey(), JSON.stringify(resetProgress));
-    localStorage.setItem('quizProgress', JSON.stringify(resetProgress));
+    // Only access localStorage in useEffect or after component mounts
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('quizProgress', JSON.stringify(resetProgress));
+    }
   };
 
 
@@ -467,6 +479,14 @@ export default function LearningPathProgress({
   )
 }
 
+
+export default function RootLayoutWrapper() {
+  return (
+    <Suspense fallback={<>loading...</>}>
+      <LearningPathProgress />
+    </Suspense>
+  );
+}
 // Sample data (remains the same)
 // const defaultModules = [
 //   {

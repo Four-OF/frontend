@@ -112,7 +112,7 @@ const joinWords = [
   { id: 1, word: "kushɛ", translation: "Hello" },
 ]
 
-export default function Welcome() {
+ function Welcome() {
   const router = useRouter();
   // Modified: Initialize currentPage to 1 and use it for progress bar
   const [currentPage, setCurrentPage] = useState(1);
@@ -339,7 +339,9 @@ export default function Welcome() {
       }
     } else if (showSection === 'results') {
       // Get the current module ID from localStorage
-      const storedProgress = localStorage.getItem("quizProgress");
+      if (typeof window !== 'undefined') {
+        const storedProgress = localStorage.getItem("quizProgress");
+      }
       let currentModuleId = '';
 
       if (storedProgress) {
@@ -370,8 +372,10 @@ export default function Welcome() {
         currentModuleId: nextModuleId,
       };
 
-      localStorage.setItem("quizProgress", JSON.stringify(updatedProgress));
-
+      // Only access localStorage in useEffect or after component mounts
+      if (typeof window !== 'undefined') {
+        localStorage.setItem("quizProgress", JSON.stringify(updatedProgress));
+      }
       // Navigate to results with module ID
       router.push(`/class/lesson/results?module=${currentModuleId}`);
     }
@@ -668,5 +672,13 @@ export default function Welcome() {
         )}
       </div>
     </ErrorBoundary>
+  );
+}
+
+export default function RootLayoutWrapper() {
+  return (
+    <Suspense fallback={<>loading...</>}>
+      <Welcome />
+    </Suspense>
   );
 }
