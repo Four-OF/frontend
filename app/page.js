@@ -5,7 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./navbar";
 import Footer from "./footer";
-import LottieLoader from "./lottie";
+// import LottieLoader from "./lottie";
+import LottieLoader from "./LottieWrapper";
 import { Diamond, Sparkle, Flower, Atom } from "@phosphor-icons/react";
 
 export default function Home() {

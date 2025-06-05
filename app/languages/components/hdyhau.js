@@ -2,8 +2,7 @@ import React, { useEffect }from 'react';
 //import LottieAnimation from './calllottie'; // Import the Lottie animation component
 import dynamic from 'next/dynamic';
 
-// Dynamically import the LottieAnimation component (disable SSR)
-const LottieAnimation = dynamic(() => import('./calllottie'), { ssr: false });
+import LottieLoader from './CallLottieWrapper';
 
 export default function Hdyhau({ language, selectedCard, setSelectedCard }) {
 
@@ -28,7 +27,7 @@ export default function Hdyhau({ language, selectedCard, setSelectedCard }) {
             <div className="flex flex-col items-center justify-center h-full gap-4 mx-auto mt-0">
                 {/* This is the second page content, where you can ask the user about their knowledge of the selected language */}
                 {/* Rectangle 1 */}
-                <LottieAnimation />
+                <LottieLoader />
                 <button
                     onClick={() => handleCardClick(1)}
                     className={`w-64 h-16 bg-gray-100 rounded-lg shadow-md border-b-4                  transition-all 

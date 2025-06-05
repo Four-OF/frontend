@@ -6,7 +6,7 @@ import { useParams, useRouter } from "next/navigation";
 import Second from "../../components/second";
 import Hdyhau from "../../components/hdyhau";
 import { CaretLeft } from '@phosphor-icons/react';
-import LottieLoader from "../../components/lottieLoader";
+import LottieLoader from "../../components/LottieLoaderWrapper";
 import { Progress } from "@heroui/progress";
 
 //error boundary to gracefully handle unexpected errors

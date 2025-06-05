@@ -5,7 +5,8 @@ import Link from 'next/link';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 //import { Star, ArrowLeft, Plus } from 'lucide-react';
 import Loading from '../com/Loading';
-import LottieLoader from ".././languages/components/progressLoader";
+// import LottieLoader from ".././languages/components/progressLoader";
+import ProgressLoader from ".././languages/components/ProgressLoaderWrapper";
 import { Card, CardBody } from "@heroui/react";
 import Navbar from '../com/navbar';
 import { Star, ArrowLeft, Plus, House, BookmarkSimple, UserCircle } from '@phosphor-icons/react';
@@ -317,7 +318,7 @@ function RootLayout({ children }) {
   if (loading) {
     return (<>
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-white">
-          <LottieLoader width={150} height={150} />
+          <ProgressLoader />
         </div>
         </>
     );
@@ -342,7 +343,7 @@ function RootLayout({ children }) {
   if (!isAuthenticated) {
     // This shouldn't happen as we're redirecting in the useEffect, but as a safeguard
     // router.push('/auth/login');
-    return <LottieLoader animationType="another" />;
+    return <ProgressLoader />;
   }
 
 
