@@ -24,31 +24,31 @@ export default function Language() {
       name: "Krio",
       learners: "50M learners",
       // icon: <Circle className="text-red-500" fill="#FFCC00" strokeWidth={1.5} />
-      icon: <Sparkle  className="text-green-500" strokeWidth={1.5} />
+      icon: <Flower weight="fill" className="text-green-500" strokeWidth={1.5} />
     },
     {
       id: "me",
       name: "Mende",
       learners: "50M learners",
-      icon: <Flower className="text-green-500" strokeWidth={1.5} />
+      icon: <Flower weight="fill" className="text-green-500" strokeWidth={1.5} />
     },
     {
       id: "te",
       name: "Temne",
       learners: "50M learners",
-      icon: <Flower className="text-green-500" strokeWidth={1.5} />
+      icon: <Flower weight="fill" className="text-green-500" strokeWidth={1.5} />
     },
     {
       id: "yo",
       name: "Yoruba",
       learners: "50M learners",
-      icon: <Sparkle  className="text-green-500" strokeWidth={1.5} />
+      icon: <Flower weight="fill" className="text-green-500" strokeWidth={1.5} />
     },
     {
-      id: "tw",
-      name: "Twi",
+      id: "sw",
+      name: "Swahili",
       learners: "50M learners",
-      icon: <Diamond weight="fill" className="text-green-500" strokeWidth={1.5} />
+      icon: <Flower weight="fill" className="text-green-500" strokeWidth={1.5} />
     },
     // {
     //   id: "ki",
@@ -127,7 +127,7 @@ export default function Language() {
   // Handle click for navigation
   const handleLanguageSelect = (id) => {
     router.push(`/languages/${encodeURIComponent(id)}/survey`);
-    console.log(`Navigating to /languages/${id}/survey`);
+    // console.log(`Navigating to /languages/${id}/survey`);
   };
 
 
@@ -156,7 +156,7 @@ export default function Language() {
                         {language.icon}
                       </div>
                       <h3 className="font-semibold text-lg text-gray-800">{language.name}</h3>
-                      <p className="text-sm text-gray-500 mt-1">{language.learners}</p>
+                      {/* <p className="text-sm text-gray-500 mt-1">{language.learners}</p> */}
                     </div>
                   </div>
                 </button>

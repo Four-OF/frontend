@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Input } from "@heroui/input";
 import { Button } from "@heroui/button";
+import DOMPurify from 'dompurify';
 
 const FloatingInput = ({ label, type = 'text', id, value, onChange }) => {
     const inputRef = useRef(null);
@@ -46,14 +47,40 @@ const LoginPage = () => {
     const [error, setError] = useState('');
 
 
+    // XSS Protection: Sanitize all user inputs and error messages
+    const sanitizeInput = (input) => {
+        return DOMPurify.sanitize(input, { ALLOWED_TAGS: [] });
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        // Sanitize inputs before processing
+        // const cleanEmail = sanitizeInput(formData.email);
+        // const cleanPassword = sanitizeInput(formData.password);
 
         // Example: If you want to check for empty fields
         if (!formData.email || !formData.password) {
             setError('Email and password are required');
             return;
         }
+
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,24}$/;
+        if (!emailRegex.test(formData.email)) {
+            setError('Please enter a valid email address');
+            setIsLoading(false);
+            return;
+        }
+
+        // Password validation
+        const passwordRegex = /^\S{8,64}$/;
+        if (!passwordRegex.test(formData.password)) {
+            setError('Password must be 8-64 characters with no spaces');
+            setIsLoading(false);
+            return;
+        }
+
         setError(''); // Clear any previous error
 
         try {
@@ -62,6 +89,7 @@ const LoginPage = () => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'X-Requested-With': 'XMLHttpRequest' // Optional: Indicate this is an AJAX request
                 },
                 credentials: 'include', // IMPORTANT: allow cookies to be included
                 body: JSON.stringify(formData),
@@ -122,7 +150,10 @@ const LoginPage = () => {
                         value={formData.password}
                         onChange={handleInputChange('password')}
                     />
-                    <Button size="lg" type="submit" className="w-full bg-violet-600">
+                    <Button
+                        size="lg"
+                        type="submit"
+                        className="w-full bg-violet-600">
                         Log in
                     </Button>
                 </form>
@@ -149,10 +180,10 @@ const LoginPage = () => {
                             </div>
                         </Button>
 
-                        <Button size="lg" type="button" className="w-full bg-violet-700 hover:bg-violet-600 text-white"
+                        {/* <Button size="lg" type="button" className="w-full bg-violet-700 hover:bg-violet-600 text-white"
                             onClick={() => handleOAuthLogin('facebook')}>
                             <div className="flex items-center gap-2">
-                                {/* Facebook SVG */}
+                                //Facebook SVG
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 48 48"
@@ -163,14 +194,14 @@ const LoginPage = () => {
                                 </svg>
                                 <span>Facebook</span>
                             </div>
-                        </Button>
+                        </Button> */}
                     </div>
                 </div>
 
                 <div className="mt-6 md:mt-8 text-center space-y-3 md:space-y-4">
                     <p className="text-sm md:text-base text-gray-600">
                         Don't have an account?{' '}
-                        <Link href="/auth/signup" className="text-blue-600 hover:text-blue-700 underline">
+                        <Link href="/languages" className="text-blue-600 hover:text-blue-700 underline">
                             Sign up
                         </Link>
                     </p>
