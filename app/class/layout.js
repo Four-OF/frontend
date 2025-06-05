@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 //import { Star, ArrowLeft, Plus } from 'lucide-react';
 import Loading from '../com/Loading';
-import LottieLoader from ".././languages/components/lottieLoader";
+import LottieLoader from ".././languages/components/progressLoader";
 import { Card, CardBody } from "@heroui/react";
 import Navbar from '../com/navbar';
 import { Star, ArrowLeft, Plus, House, BookmarkSimple, UserCircle } from '@phosphor-icons/react';
@@ -214,7 +214,7 @@ function RootLayout({ children }) {
   useEffect(() => {
     const fetchLanguageSpecificData = async () => {
       if (userLanguage) { // Ensure userLanguage is available
-        setLoading(true); // Set loading to true while fetching language data
+        // setLoading(true); // Set loading to true while fetching language data
         try {
           // Construct the URL using the user's selected language
           const response = await fetch(`http://localhost:8080/api/language-data/${userLanguage}`, {
@@ -271,11 +271,11 @@ function RootLayout({ children }) {
   }, [router]);
 
   // Set loading to false after a delay (simulating data fetching)
-  useEffect(() => {
-    // Simulate a loading delay for demonstration purposes
-    const timer = setTimeout(() => setLoading(false), 5000);
-    return () => clearTimeout(timer); // Cleanup timeout
-  }, []);
+  // useEffect(() => {
+  //   // Simulate a loading delay for demonstration purposes
+  //   const timer = setTimeout(() => setLoading(false), 5000);
+  //   return () => clearTimeout(timer); // Cleanup timeout
+  // }, []);
 
 
   // Define the isActive function
@@ -315,8 +315,13 @@ function RootLayout({ children }) {
 
   // Show loader while checking authentication
   if (loading) {
-    return <LottieLoader animationType="another" />;
-  }
+    return (<>
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-white">
+          <LottieLoader width={150} height={150} />
+        </div>
+        </>
+    );
+  };
 
   // Allow access to public routes regardless of auth status
   if (isPublicRoute) {
@@ -346,8 +351,6 @@ function RootLayout({ children }) {
     <ClassDataContext.Provider value={contextValue}>
       {/* {loading ? <LottieLoader animationType="another" /> : ( */}
       {/* <> */}
-
-
       {
         isLessonPage ? (
           <main className="flex-1 md:ml-0 lg:ml-0 lg:mr-0 min-h-screen" >

@@ -7,7 +7,6 @@ import Second from "../../components/second";
 import Hdyhau from "../../components/hdyhau";
 import { CaretLeft } from '@phosphor-icons/react';
 import LottieLoader from "../../components/lottieLoader";
-import Signup from "../../../auth/signup/page";
 import { Progress } from "@heroui/progress";
 
 //error boundary to gracefully handle unexpected errors
@@ -33,7 +32,7 @@ const languageNames = {
   am: "Amharic",
 
   ma: "Mandinka",
-  ja: "Japanese",
+  sw: "Swahili",
   ko: "Korean",
   it: "Italian",
   du: "Dutch",
@@ -45,14 +44,7 @@ export default function Welcome({ Component, pageProps }) {
   const router = useRouter();
   const { languageId } = useParams();// Initialize the search parameters
   const languageName = languageId ? languageNames[languageId] || "this language" : "this language";
-
-  // Save to localStorage
-  useEffect(() => {
-    localStorage.setItem('selectedLanguage', languageId);
-  }, [languageId]);
-
-
-  console.log(`Language selected: ${languageName}`); // Log for debugging
+  // console.log(`Language selected: ${languageName}`); // Log for debugging
 
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCard, setSelectedCard] = useState(null);// State to track the second card selection on page 1
@@ -63,9 +55,64 @@ export default function Welcome({ Component, pageProps }) {
   // Add a new state to control the final progress animation
   const [isAnimatingFinalProgress, setIsAnimatingFinalProgress] = useState(false);
 
-  console.log(`Language selected: ${languageName}`); // Log for debugging
-
   const totalPages = 3;
+
+  // Save to localStorage
+  useEffect(() => {
+    localStorage.setItem('selectedLanguage', languageId);
+  }, [languageId]);
+
+  // Add this new useEffect to restore progress from localStorage
+  useEffect(() => {
+    // Restore progress from localStorage on component mount
+    const savedPage = localStorage.getItem('currentPage');
+    const savedCard = localStorage.getItem('selectedCard1');
+    const savedSecondCard = localStorage.getItem('selectedSecondCard2');
+    const savedThirdCard = localStorage.getItem('selectedThirdCard3');
+
+    if (savedPage) {
+      setCurrentPage(parseInt(savedPage));
+    }
+    if (savedCard) {
+      setSelectedCard(parseInt(savedCard));
+    }
+    if (savedSecondCard) {
+      setSelectedSecondCard(parseInt(savedSecondCard));
+    }
+    if (savedThirdCard) {
+      setSelectedThirdCard(parseInt(savedThirdCard));
+    }
+
+        // Always show loader for at least 1 second
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+    
+    return () => clearTimeout(timer);
+  }, []); // Empty dependency array means this runs once on mount
+
+
+  // Save progress to localStorage whenever selections or page changes
+  useEffect(() => {
+    localStorage.setItem('currentPage', currentPage);
+    localStorage.setItem('selectedCard', selectedCard);
+    localStorage.setItem('selectedSecondCard', selectedSecondCard);
+    localStorage.setItem('selectedThirdCard', selectedThirdCard);
+  }, [currentPage, selectedCard, selectedSecondCard, selectedThirdCard]);
+
+  // Check if loading screen has been shown before
+  useEffect(() => {
+    const loadingShown = localStorage.getItem('loadingShown');
+    if (loadingShown) {
+      setLoading(false);
+    } else {
+      const timer = setTimeout(() => {
+        setLoading(false);
+        localStorage.setItem('loadingShown', 'true');
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   const handleNext = () => {
     if (currentPage < totalPages) {
@@ -86,10 +133,7 @@ export default function Welcome({ Component, pageProps }) {
     } else if (currentPage === 1) {
       router.back(); // If on the first page and back is clicked, go back to the previous page in history
     }
-
-    console.log(`Current Page: ${currentPage}`); // Log the current page for debugging purposes
-    console.log("hello")
-
+    // console.log(`Current Page: ${currentPage}`); // Log the current page for debugging purposes
   };
 
   const handleCardClick = (id) => {
@@ -105,44 +149,8 @@ export default function Welcome({ Component, pageProps }) {
     (currentPage === 2 && selectedSecondCard === null) ||
     (currentPage === 3 && selectedThirdCard === null);
 
-  // Function to collect and send selections to API
-  // const submitSelections = async () => {
-  //   const selections = {
-  //     language: languageName, // Use languageName instead of undefined language
-  //     page1: {
-  //       suvQuestion: `Why are you learning ${languageName}?`,
-  //       suvAnswer: selectedCard,
-  //     },
-  //     page2: {
-  //       suvQuestion: `How much ${languageName} do you know?`,
-  //       suvAnswer: selectedSecondCard,
-  //     },
-  //     page3: {
-  //       suvQuestion: 'How did you hear about us?',
-  //       suvAnswer: selectedThirdCard,
-  //     }
-  //   };
-  //   console.log('Collected Selections:', selections);
 
-  //   try {
-  //     const response = await fetch('http://localhost:8080/survey', {
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //       },
-  //       body: JSON.stringify(selections),
-  //     });
-
-  //     if (!response.ok) {
-  //       throw new Error('Failed to submit selections');
-  //     }
-
-  //     const result = await response.json();
-  //     console.log('API Response:', result);
-  //   } catch (error) {
-  //     console.error('Error submitting selections:', error);
-  //   }
-  // };
+  console.log('Page:', currentPage, '| Disabled:', isContinueDisabled);
 
   // Calculate width percentages for expansion/contraction
   const progressWidth = {
@@ -153,14 +161,18 @@ export default function Welcome({ Component, pageProps }) {
 
   // Set loading to false after a delay (simulating data fetching)
 
-  useEffect(() => {
-    // Simulate a loading delay for demonstration purposes
-    const timer = setTimeout(() => setLoading(false), 3000);
-    return () => clearTimeout(timer); // Cleanup timeout
-  }, []);
+  // useEffect(() => {
+  //   // Simulate a loading delay for demonstration purposes
+  //   const timer = setTimeout(() => setLoading(false), 3000);
+  //   return () => clearTimeout(timer); // Cleanup timeout
+  // }, []);
   return (
     <>
-      {loading ? <LottieLoader width={150} height={150} /> : (
+      {loading ? (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-white">
+          <LottieLoader width={150} height={150} />
+        </div>
+        ) : (
         <ErrorBoundary>
           <div className="h-screen flex flex-col w-full">
             {/* Top Content */}
@@ -201,7 +213,7 @@ export default function Welcome({ Component, pageProps }) {
                           : 'bg-white border border-gray-200 hover:bg-gray-50'
                           }`}
                       >
-                        <div className="p-4 text-gray-600">Talk to People</div>
+                        <div className="p-4 text-gray-600">😗Talk to People</div>
                       </button>
 
                       {/* Rectangle 2 */}
@@ -212,7 +224,8 @@ export default function Welcome({ Component, pageProps }) {
                           : 'bg-white border border-gray-200 hover:bg-gray-50'
                           }`}
                       >
-                        <div className="p-4 text-gray-700">Just for Fun/Curiosity</div>
+                        <div className="p-4 text-gray-600">🎉Just for Fun/Curiosity</div>
+                      
                       </button>
 
                       {/* Rectangle 3 */}
@@ -223,7 +236,7 @@ export default function Welcome({ Component, pageProps }) {
                           : 'bg-white border border-gray-200 hover:bg-gray-50'
                           }`}
                       >
-                        <div className="p-4 text-gray-800">Other </div>
+                        <div className="p-4 text-gray-800">🫡Other </div>
                       </button>
                     </div>
                   </>
@@ -241,9 +254,6 @@ export default function Welcome({ Component, pageProps }) {
                     selectedCard={selectedThirdCard}
                     setSelectedCard={setSelectedThirdCard}
                   />}
-                {/* {currentPage === 4 &&
-                  <Signup />
-                } */}
               </div>
             </div>
 

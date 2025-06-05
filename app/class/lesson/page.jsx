@@ -3,7 +3,7 @@
 //STATUS: ACTIVE
 'use client';
 
-import { useState, useEffect } from "react";
+import { Suspense, useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { X, BookmarkSimple } from '@phosphor-icons/react';
 import { cn } from "@/lib/utils";
@@ -15,6 +15,8 @@ import MatchSound from "./ui/match-sound";
 import Match from "./ui/match";
 import Result from "./ui/result";
 import { Button, Progress, CardHeader, CardBody, CardFooter } from "@heroui/react";
+import { useClassData } from '.././layout'; // Assuming you have this context
+
 
 // Import or define your lessons data
 const lessonsData = {
@@ -86,7 +88,7 @@ const languageNames = {
   te: "Temne",
   yo: "Yoruba",
   tw: "Twi",
-  ki: "Kishwahili",
+  sw: "Swahili",
   li: "Lingala",
   fu: "Fulani",
   hu: "Hausa",
@@ -112,8 +114,9 @@ const joinWords = [
   { id: 1, word: "kushɛ", translation: "Hello" },
 ]
 
- function Welcome() {
+function Welcome() {
   const router = useRouter();
+  const { isAuthenticated } = useClassData();
   // Modified: Initialize currentPage to 1 and use it for progress bar
   const [currentPage, setCurrentPage] = useState(1);
   const [currentQuestion, setCurrentQuestion] = useState(1);
@@ -274,7 +277,7 @@ const joinWords = [
   }, [languageName, moduleId]);
 
   // Update the handleContinue function - replace the match sections with this:
-  const handleContinue = () => {
+  const handleContinue = async () => {
     if (showSection === 'card') {
       if (currentQuestion < 5) {
         setCurrentQuestion((prev) => prev + 1);
@@ -338,46 +341,67 @@ const joinWords = [
         setCurrentPage(18);
       }
     } else if (showSection === 'results') {
-      // Get the current module ID from localStorage
-      if (typeof window !== 'undefined') {
-        const storedProgress = localStorage.getItem("quizProgress");
-      }
-      let currentModuleId = '';
+      // Get the current module ID
+      const token = localStorage.getItem('authToken');
 
-      if (storedProgress) {
-        const progress = JSON.parse(storedProgress);
-        currentModuleId = progress.currentModuleId;
+      if (!isAuthenticated) {
+        console.warn('User not authenticated, cannot save progress');
+        router.push(`/class/lesson/results?module=${moduleId}`);
+        return;
       }
 
-      // Update the progress in local storage
-      const updatedModules = modules.map(module => {
-        if (module.id === currentModuleId) {
-          return { ...module, status: "completed" };
+      try {
+        // Fetch current progress from backend
+        const response = await fetch('http://localhost:8080/api/user/progress', {
+          method: 'GET',
+          credentials: 'include',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+
+        if (response.ok) {
+          const progress = await response.json();
+          const currentModuleId = moduleId || progress.currentModuleId;
+
+          // Update the progress
+          const updatedModules = progress.modules.map(module => {
+            if (module.id === currentModuleId) {
+              return { ...module, status: "completed" };
+            }
+            return module;
+          });
+
+          const currentModuleIndex = progress.modules.findIndex(m => m.id === currentModuleId);
+          let nextModuleId = '';
+
+          if (currentModuleIndex !== -1 && currentModuleIndex < updatedModules.length - 1) {
+            updatedModules[currentModuleIndex + 1].status = "in-progress";
+            nextModuleId = updatedModules[currentModuleIndex + 1].id;
+          }
+
+          const updatedProgress = {
+            modules: updatedModules,
+            currentModuleId: nextModuleId,
+          };
+
+          // Save updated progress to backend
+          await fetch('http://localhost:8080/api/user/progress', {
+            method: 'POST',
+            credentials: 'include',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(updatedProgress),
+          });
+
+          console.log('Progress updated and saved to backend');
         }
-        return module;
-      });
-
-      const nextModuleIndex = modules.findIndex(module => module.status === "in-progress");
-      let nextModuleId = '';
-
-      if (nextModuleIndex !== -1) {
-        nextModuleId = modules[nextModuleIndex].id;
-      } else {
-        // All modules completed
-        nextModuleId = '';
-      }
-
-      const updatedProgress = {
-        modules: updatedModules,
-        currentModuleId: nextModuleId,
-      };
-
-      // Only access localStorage in useEffect or after component mounts
-      if (typeof window !== 'undefined') {
-        localStorage.setItem("quizProgress", JSON.stringify(updatedProgress));
+      } catch (error) {
+        console.error('Error updating progress:', error);
       }
       // Navigate to results with module ID
-      router.push(`/class/lesson/results?module=${currentModuleId}`);
+      router.push(`/class/lesson/results?module=${moduleId}`);
     }
   };
 

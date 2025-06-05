@@ -208,7 +208,7 @@ function LearningPathStep({ module, index, arrayIndex, displayIndex, currentInde
   );
 }
 
- function LearningPathProgress({
+function LearningPathProgress({
   //modules = defaultModules,
   //initialModules = defaultModules,
   title = "Web Development Fundamentals",
@@ -217,6 +217,7 @@ function LearningPathStep({ module, index, arrayIndex, displayIndex, currentInde
   streak = 5,
 }) {
   const router = useRouter();
+  const { isAuthenticated } = useClassData();
   const searchParams = useSearchParams();
   const [modules, setModules] = useState([]);
   const [currentModuleId, setCurrentModuleId] = useState("");
@@ -279,33 +280,89 @@ function LearningPathStep({ module, index, arrayIndex, displayIndex, currentInde
   // };
   // Function to load progress from localStorage
   useEffect(() => {
-    
+
     // Only load progress on client-side
     loadProgress();
   }, []); // Empty dependency array means this runs once on mount
-const loadProgress = () => {
-      try {
-        const storedProgress = localStorage.getItem('quizProgress');
-        if (storedProgress) {
-          const progress = JSON.parse(storedProgress);
-          setModules(progress.modules || defaultModules);
-          setCurrentModuleId(progress.currentModuleId || defaultModules[0]?.id || "");
-        } else {
-          setModules(defaultModules);
-          setCurrentModuleId(defaultModules[0]?.id || "");
-          const initialProgress = {
-            modules: defaultModules,
-            currentModuleId: defaultModules[0]?.id || "",
-          };
-          localStorage.setItem('quizProgress', JSON.stringify(initialProgress));
-        }
-      } catch (error) {
-        console.error('Error loading progress from localStorage:', error);
-        // Fallback to default values if localStorage fails
+  const loadProgress = async () => {
+    try {
+      const storedProgress = localStorage.getItem('quizProgress');
+      // Get user token from localStorage or context
+      const token = localStorage.getItem('authToken');
+      if (storedProgress) {
+        const progress = JSON.parse(storedProgress);
+        setModules(progress.modules || defaultModules);
+        setCurrentModuleId(progress.currentModuleId || defaultModules[0]?.id || "");
+      } else {
+        setModules(defaultModules);
+        setCurrentModuleId(defaultModules[0]?.id || "");
+        const initialProgress = {
+          modules: defaultModules,
+          currentModuleId: defaultModules[0]?.id || "",
+        };
+        localStorage.setItem('quizProgress', JSON.stringify(initialProgress));
+      }
+
+      if (!isAuthenticated) {
+        console.warn('User not authenticated, using default modules');
+        setModules(defaultModules);
+        setCurrentModuleId(defaultModules[0]?.id || "");
+        return;
+      }
+
+      const response = await fetch('http://localhost:8080/api/user/progress', {
+        method: 'GET',
+        credentials: 'include',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        const progress = await response.json();
+        setModules(progress.modules || defaultModules);
+        setCurrentModuleId(progress.currentModuleId || defaultModules[0]?.id || "");
+      } else {
+        // Fallback to default if API fails
         setModules(defaultModules);
         setCurrentModuleId(defaultModules[0]?.id || "");
       }
-    };
+    } catch (error) {
+      console.error('Error loading progress from backend || localStorage:', error);
+      // Fallback to default values if localStorage fails
+      setModules(defaultModules);
+      setCurrentModuleId(defaultModules[0]?.id || "");
+    }
+  };
+
+  // 2. Add a function to save progress to backend:
+  const saveProgress = async (progressData) => {
+    try {
+      const token = localStorage.getItem('authToken');
+
+      if (!isAuthenticated) {
+        console.warn('User not authenticated, cannot save progress');
+        return;
+      }
+
+      const response = await fetch('http://localhost:8080/api/user/progress', {
+        method: 'POST',
+        credentials: 'include',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(progressData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to save progress to backend');
+      }
+
+      console.log('Progress saved to backend successfully');
+    } catch (error) {
+      console.error('Error saving progress to backend:', error);
+    }
+  };
   // Initialize quiz progress on component mount
   useEffect(() => {
     if (!initialized) {
@@ -387,22 +444,35 @@ const loadProgress = () => {
   //   },
   // ];
 
-  // Reset all progress and start over
-  const handleResetProgress = () => {
-    const modulesToReset = defaultModules; // Use defaultModules as fallback
-    setModules(modulesToReset);
-    setCurrentModuleId(modulesToReset[0]?.id || "");
-    const resetProgress = {
-      modules: modulesToReset,
-      currentModuleId: modulesToReset[0]?.id || "",
-    };
-    // localStorage.setItem(getStorageKey(), JSON.stringify(resetProgress));
-    // Only access localStorage in useEffect or after component mounts
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('quizProgress', JSON.stringify(resetProgress));
-    }
-  };
+  // // Reset all progress and start over
+  // const handleResetProgress = () => {
+  //   const modulesToReset = defaultModules; // Use defaultModules as fallback
+  //   setModules(modulesToReset);
+  //   setCurrentModuleId(modulesToReset[0]?.id || "");
+  //   const resetProgress = {
+  //     modules: modulesToReset,
+  //     currentModuleId: modulesToReset[0]?.id || "",
+  //   };
+  //   // localStorage.setItem(getStorageKey(), JSON.stringify(resetProgress));
+  //   // Only access localStorage in useEffect or after component mounts
+  //   if (typeof window !== 'undefined') {
+  //     localStorage.setItem('quizProgress', JSON.stringify(resetProgress));
+  //   }
+  // };
 
+  // 3. Update the handleResetProgress function:
+  const handleResetProgress = async () => {
+    const resetProgress = {
+      modules: defaultModules,
+      currentModuleId: defaultModules[0]?.id || "",
+    };
+
+    setModules(defaultModules);
+    setCurrentModuleId(defaultModules[0]?.id || "");
+
+    // Save to backend instead of localStorage
+    await saveProgress(resetProgress);
+  };
 
 
   // Calculate overall progress

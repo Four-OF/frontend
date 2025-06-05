@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Input } from "@heroui/input";
 import { Button } from "@heroui/button";
+import DOMPurify from 'dompurify';
 
 export const EyeSlashFilledIcon = (props) => {
     return (
@@ -89,11 +90,14 @@ const SignupForm = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
 
+    const cleanQueryParam = (value) => {
+        return DOMPurify.sanitize(value?.trim() || "");
+    };
     // Extract query parameters
-    const language = searchParams.get("language");
-    const page1Answer = searchParams.get("page1Answer");
-    const page2Answer = searchParams.get("page2Answer");
-    const page3Answer = searchParams.get("page3Answer");
+    const language = cleanQueryParam(searchParams.get("language"));
+    const page1Answer = cleanQueryParam(searchParams.get("page1Answer"));
+    const page2Answer = cleanQueryParam(searchParams.get("page2Answer"));
+    const page3Answer = cleanQueryParam(searchParams.get("page3Answer"));
 
     const [formData, setFormData] = useState({
         name: '',
@@ -115,17 +119,44 @@ const SignupForm = () => {
             return;
         }
 
-        if (!/\S+@\S+\.\S+/.test(formData.email)) {
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        const nameRegex = /^[a-z ,.'-]+$/i;
+        // Validate name format
+        if (!formData.name || !nameRegex.test(sanitizeInput(formData.name))) {
+            setError("Please enter a valid name");
+            setIsLoading(false);
+            return;
+        }
+
+        // Validate email format
+        if (!formData.email || !emailRegex.test(sanitizeInput(formData.email))) {
             setError("Please enter a valid email address");
             setIsLoading(false);
             return;
         }
 
-        if (formData.password.length < 6) {
-            setError("Password must be at least 6 characters long");
+
+        // Validate password
+        const passwordRegex = /^\S{8,64}$/;
+        if (!formData.password || !passwordRegex.test(sanitizeInput(formData.password))) {
+            setError("Password must be at least 8 characters long with no spaces");
             setIsLoading(false);
             return;
         }
+
+        if (!formData.password.trim()) {
+            setError("Password is required");
+            setIsLoading(false);
+            return;
+        }
+
+
+        // if (formData.password.length < 8) {
+        //     setError("Password must be at least 6 characters long");
+        //     setIsLoading(false);
+        //     return;
+        // }
 
         // Validate survey data
         if (!language || !page1Answer || !page2Answer || !page3Answer) {
@@ -181,8 +212,8 @@ const SignupForm = () => {
                 throw new Error("Failed to submit survey data");
             }
 
-            const surveyResult = await surveyResponse.json();
-            console.log("API Response (Survey):", surveyResult);
+            // const surveyResult = await surveyResponse.json();
+            // console.log("API Response (Survey):", surveyResult);
 
             // Redirect to class page after both operations succeed
             router.push("/class");
@@ -195,8 +226,11 @@ const SignupForm = () => {
         }
     };
 
+    const sanitizeInput = (value) => {
+        return DOMPurify.sanitize(value.trim());
+    };
     const handleInputChange = (field) => (value) => {
-        setFormData({ ...formData, [field]: value });
+        setFormData({ ...formData, [field]: sanitizeInput(value) });
     };
 
     const toggleVisibility = () => setIsVisible(!isVisible);
@@ -224,7 +258,7 @@ const SignupForm = () => {
             >
                 <CaretLeft size={28} />
             </button>
-            
+
             {/* Main content container (Title and Form) - centered */}
             <div className="w-full max-w-sm space-y-5 mx-auto flex-grow flex flex-col justify-center">
                 <h1 className="text-3xl md:text-4xl font-semibold text-gray-900 text-center mb-6 md:mb-8">
@@ -238,7 +272,7 @@ const SignupForm = () => {
                             {error}
                         </div>
                     )}
-                    
+
                     <FloatingInput
                         label="Name"
                         id="name"
@@ -246,7 +280,7 @@ const SignupForm = () => {
                         value={formData.name}
                         onChange={handleInputChange("name")}
                     />
-                    
+
                     <FloatingInput
                         label="Email"
                         type="email"
@@ -254,7 +288,7 @@ const SignupForm = () => {
                         value={formData.email}
                         onChange={handleInputChange("email")}
                     />
-                    
+
                     <FloatingInput
                         label="Password"
                         endContent={
@@ -276,23 +310,23 @@ const SignupForm = () => {
                         value={formData.password}
                         onChange={handleInputChange("password")}
                     />
-                    
-                    <Button 
-                        size="lg" 
-                        type="submit" 
+
+                    <Button
+                        size="lg"
+                        type="submit"
                         className="w-full bg-violet-600 hover:bg-violet-700 text-white"
                         disabled={isLoading}
                     >
                         {isLoading ? "Creating Account..." : "Create Account"}
                     </Button>
                 </form>
-                
+
                 <div className="flex flex-col items-center justify-between mt-4 gap-4">
                     <p className="text-gray-500">or</p>
                     <div className="flex flex-row w-full gap-4">
-                        <Button 
-                            size="lg" 
-                            type="button" 
+                        <Button
+                            size="lg"
+                            type="button"
                             className="w-full bg-violet-50 hover:bg-violet-100 border border-violet-200 text-violet-600"
                             onPress={() => handleOAuthLogin('google')}
                             disabled={isLoading}
@@ -314,15 +348,15 @@ const SignupForm = () => {
                             </div>
                         </Button>
 
-                        <Button 
-                            size="lg" 
-                            type="button" 
+                        {/* <Button
+                            size="lg"
+                            type="button"
                             className="w-full bg-blue-600 hover:bg-blue-700 text-white"
                             onPress={() => handleOAuthLogin('facebook')}
                             disabled={isLoading}
                         >
                             <div className="flex items-center gap-2">
-                                {/* Facebook SVG */}
+                                // Facebook SVG
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 48 48"
@@ -333,7 +367,7 @@ const SignupForm = () => {
                                 </svg>
                                 <span>Facebook</span>
                             </div>
-                        </Button>
+                        </Button> */}
                     </div>
                 </div>
 

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Lottie from 'lottie-react';
-import animationData from './lottiefiles/loading.json'; // Adjust path if needed
+import animationData from './lottiefiles/announcment.json'; // Adjust path if needed
 
 const LottieAnimation = ({ loop = true, autoplay = true, style = {} }) => {
   return (
@@ -15,4 +15,3 @@ const LottieAnimation = ({ loop = true, autoplay = true, style = {} }) => {
 };
 
 export default LottieAnimation;
-
