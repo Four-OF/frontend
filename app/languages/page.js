@@ -138,7 +138,7 @@ export default function Language() {
         <div className="flex flex-col items-center gap-8 pt-20 ">
           <div className="">
             <h2 className=" text-center mt-8">
-              What do you want to learn?
+              What would you like to learn?
             </h2>
           </div>
           {/* Languages Column */}

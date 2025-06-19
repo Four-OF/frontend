@@ -122,12 +122,12 @@ const LoginPage = () => {
     return (
         <div className="flex flex-col min-h-screen bg-gray-50 p-4 sm:p-6 lg:p-8">
 
-            <button
+            <Link
                 className="flex items-center justify-center h-8 w-8 bg-gray-200 rounded-full disabled:opacity-50 disabled:cursor-not-allowed"
-                onClick={() => history.back()}
+                href="/"
             >
                 <CaretLeft size={28} />
-            </button>
+            </Link>
             <div className="w-full max-w-sm space-y-5 mx-auto flex-grow flex flex-col justify-center">
                 <h1 className="text-3xl md:text-4xl font-semibold text-gray-900 text-center mb-6 md:mb-8">
                     Log in
@@ -143,13 +143,22 @@ const LoginPage = () => {
                         value={formData.email}
                         onChange={handleInputChange('email')}
                     />
-                    <FloatingInput
-                        label="Password"
-                        type="password"
-                        id="password"
-                        value={formData.password}
-                        onChange={handleInputChange('password')}
-                    />
+                    {/* START: Added wrapper and link for "Forgot Password" */}
+                    <div>
+                        <FloatingInput
+                            label="Password"
+                            type="password"
+                            id="password"
+                            value={formData.password}
+                            onChange={handleInputChange('password')}
+                        />
+                        <div className="flex justify-end mt-1.5">
+                            <Link href="/auth/forgot-password" className="text-sm font-medium text-violet-600 hover:underline">
+                                Forgot password?
+                            </Link>
+                        </div>
+                    </div>
+                    {/* END: Added wrapper and link for "Forgot Password" */}
                     <Button
                         size="lg"
                         type="submit"
