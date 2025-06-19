@@ -3,6 +3,8 @@ import { Exo_2 } from 'next/font/google'
 import "./globals.css"; // Ensure this file exists in the same directory
 import { UIProvider } from "@/heroui/HeroUIProvider";
 import '.././public/fonts/fonts.css';
+//Analytics from vercel
+import { Analytics } from "@vercel/analytics/next"
 
 const exo2 = Exo_2({
   subsets: ['latin'],
