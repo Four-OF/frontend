@@ -19,6 +19,7 @@ export default function Home() {
     { name: "More+", icon: <Flower className="text-green-500" strokeWidth={1.5} /> },
     // { name: "Korean", icon: <Diamond className="text-green-500" fill="#FFFFFF" strokeWidth={1.5} /> },
     // { name: "Mandinka", icon: <Atom className="text-green-500" strokeWidth={1.5} /> },
+    //Test push
     // { name: "Portuguese", icon: <Sparkle className="text-green-500 strokeWidth={1.5}" /> },
     // { name: "Arabic", icon: <Flower className="text-green-500" strokeWidth={1.5} /> },
     // { name: "Dutch", icon: <Diamond className="text-green-500" fill="#FFFFFF" strokeWidth={1.5} /> },
