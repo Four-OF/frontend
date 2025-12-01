@@ -8,7 +8,7 @@ import Loading from '../com/Loading';
 // import LottieLoader from ".././languages/components/progressLoader";
 import ProgressLoader from ".././languages/components/ProgressLoaderWrapper";
 import { Card, CardBody } from "@heroui/react";
-import Navbar from '../com/navbar';
+import SideNavbar from '../com/sidenavbar';
 import { Star, ArrowLeft, Plus, House, BookmarkSimple, UserCircle } from '@phosphor-icons/react';
 
 
@@ -266,9 +266,9 @@ function RootLayout({ children }) {
     // Prefetch routes
     router.prefetch('/class');
     router.prefetch('/class/phrasebook');
-    router.prefetch('/class/notifications');
     router.prefetch('/class/messages');
     router.prefetch('/class/profile');
+    router.prefetch('/class/settings');
   }, [router]);
 
   // Set loading to false after a delay (simulating data fetching)
@@ -279,7 +279,7 @@ function RootLayout({ children }) {
   // }, []);
 
 
-  // Define the isActive function
+  // Define the isActive function on Mobile View
   const navItems = [
     {
       label: 'Learn',
@@ -397,15 +397,16 @@ function RootLayout({ children }) {
             <div className="flex flex-1 flex-col md:flex-row">
               {/* Left Sidebar (Desktop Only) */}
               {/* Left Sidebar - Only show if not lesson page */}
-              <div className="hidden md:block w-20 lg:w-64 fixed left-0 top-0 h-full border-r border-violet-100 p-4 flex flex-col z-20">
-                <Navbar />
-              </div>
+              <aside className="hidden md:block w-20 lg:w-64 fixed left-0 top-0 h-full border-r border-violet-100 p-4 flex flex-col z-20">
+                <SideNavbar />
+              </aside>
               {/* Main Content - Adjust margins based on lesson page */}
               <div className={`flex-1 md:ml-20 lg:ml-64 lg:mr-96 min-h-screen`}>
                 <main className="max-w-2xl mx-auto p-4 overflow-y-auto">
                   {/* Header - Only show if not lesson page */}
                   <div className="hidden md:block sticky top-0 bg-white border-b border-violet-100 p-4 z-10">
                     <h1 className="text-xl font-bold text-violet-900">
+                      {/* Header title based on the current pathname */}
                       {pathname === '/class' && (
                         <div className="relative group inline-block">
                           {/* Language Name Box */}
@@ -431,13 +432,13 @@ function RootLayout({ children }) {
                           </div>
                         </div>
                       )}
-                      {pathname === '/class/phrasebook' && 'phrasebook'}
-                      {pathname === '/class/notification' && 'Notification'}
-                      {pathname === '/class/messages' && 'Messages'}
-                      {pathname === '/class/profile' && 'Profile'}
                       {pathname === '/class/learn' && <Link href="/class" >
                         <div className="flex items-center"><ArrowLeft />Back</div>
                       </Link>}
+                      {pathname === '/class/review' && 'Review'}
+                      {pathname === '/class/phrasebook' && 'phrasebook'}
+                      {pathname === '/class/profile' && 'Profile'}
+                      {pathname === '/class/Settings' && 'Settings'}
                     </h1>
                   </div>
                   {children}
@@ -446,11 +447,11 @@ function RootLayout({ children }) {
 
 
 
-
+              {/* ---------- RIGHT PANEL ---------- */}
               {/* Right Panel - Only show if not lesson page */}
-              <div className="hidden lg:block w-96 fixed right-0 top-0 h-full border-l border-violet-100 p-4 bg-white z-20">
+              {/* <div className="hidden lg:block w-96 fixed right-0 top-0 h-full border-l border-violet-100 p-4 bg-white z-20">
                 <div className="bg-violet-50 rounded-lg p-4 mb-4">
-                  <button className="text-lg font-semibold mb-2 text-violet-900">Add new language</button>
+                  <button className="text-lg font-semibold mb-2 text-violet-900">Add new language</button> */}
                   {/* <div className="bg-white rounded-lg p-4 shadow-sm">
                     <h3 className="font-medium text-violet-900 mb-2">Chapter 1</h3>
                     <ul className="text-violet-700 text-sm list-disc pl-5 space-y-2">
@@ -465,7 +466,7 @@ function RootLayout({ children }) {
                       Continue
                     </button>
                   </div> */}
-                </div>
+                {/* </div>
                 <div className="bg-violet-50 rounded-lg p-4">
                   <h2 className="text-lg font-semibold mb-2 text-violet-900">Features</h2>
                   <div className="bg-white rounded-lg p-4 shadow-sm">
@@ -479,7 +480,7 @@ function RootLayout({ children }) {
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Bottom Navigation (Mobile Only) */}
