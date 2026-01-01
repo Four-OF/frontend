@@ -1,11 +1,11 @@
-//Responsible for the learn content
+//Responsible for the learn UI content
 //Contain the Flashcards, fill ins the blank, word matching result
 //STATUS: ACTIVE
 'use client';
 
 import { Suspense, useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { X, BookmarkSimple } from '@phosphor-icons/react';
+// import { X, BookmarkSimple } from '@phosphor-icons/react';
 import { cn } from "@/lib/utils";
 
 import Cards from "./ui/cards";
@@ -17,6 +17,9 @@ import Result from "./ui/result";
 import { Button, Progress, CardHeader, CardBody, CardFooter } from "@heroui/react";
 import { useClassData } from '.././layout'; // Assuming you have this context
 
+//This import is for the single lesson card.
+import { motion } from "framer-motion";
+import { X, Bookmark } from "lucide-react"; 
 
 // Import or define your lessons data
 const lessonsData = {
@@ -203,7 +206,7 @@ function Welcome() {
   const url = `http://localhost:8080/api/language-data/${languageName}/chapter/1/topic/${moduleId}`;
   console.log("Requesting URL:", url);
 
-
+  //Fetch lesson data from backend API
   useEffect(() => {
     if (languageName && moduleId && languageName !== 'My Language Journey') {
       const fetchData = async () => {
@@ -532,24 +535,44 @@ function Welcome() {
       case 'card':
         return firstSet?.length > 0 ? (
 
-          <div className="flex flex-col mt-5 md:mt-3 p-4 items-center">
-            <div
-              className="bg-slate-50 h-64 w-52 rounded-md border-2 border-b-4 hover:cursor-pointer"
+          <motion.div
+          className="flex flex-col items-center mt-5 md:mt-3 p-4"
+          initial={{ opacity: 0, y: 30, scale: 0.9 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 160,
+            damping: 12,
+          }}
+          whileHover={{
+            scale: 1.05,
+            y: -4,
+            transition: { type: "spring", stiffness: 200, damping: 10 },
+          }}
+        >
+
+        
+          {/* <div className="flex flex-col mt-5 md:mt-3 p-4 items-center"> */}
+
+            <motion.div
+              className="bg-slate-50 h-48 w-40 sm:h-56 sm:w-44 md:h-64 md:w-52 rounded-xl border-2 border-b-4 hover:cursor-pointer shadow-sm"
+              whileTap={{ scale: 0.96 }}
+            
               onClick={() => handleCardClick(firstSet[currentQuestion - 1]?.id)}
 
             >
               <div className="flex justify-between items-center p-2">
                 <span className="text-lg">{currentQuestion}</span>
-                <BookmarkSimple size={32} className="w-5 h-5 text-violet-600" />
+                <Bookmark size={32} className="w-5 h-5 text-violet-600" />
               </div>
               <div className="flex justify-center font-semibold m-12">
                 <span className="text-violet-600 font-semibold">{firstSet[currentQuestion - 1]?.translation}</span>
               </div>
-            </div>
+            </motion.div>
             <div className="flex justify-center m-2">
               <span>{firstSet[currentQuestion - 1]?.phrase}</span>
             </div>
-          </div>
+          </motion.div>
 
         ) : null;
       case 'putin':

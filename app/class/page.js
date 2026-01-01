@@ -236,7 +236,7 @@ export default function ClassPage({ userName, userEmail }) {
 
 
 
-    <div className="p-6 max-w-4xl">
+    <div className="p-6 space-y-6">
       <div className="flex flex-col space-y-4">
         {chapters.map((chapter) => (
           <div
