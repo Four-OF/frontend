@@ -479,3 +479,6 @@
 // };
 
 // export default SignupPage;
+export default function LegacycodePage() {
+  return <div>Legacy Code</div>;
+}
