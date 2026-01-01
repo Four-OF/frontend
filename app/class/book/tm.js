@@ -217,6 +217,7 @@ function LearningPathStep({ module, index, arrayIndex, displayIndex, currentInde
   streak = 5,
 }) {
   const router = useRouter();
+  
   const searchParams = useSearchParams();
   const [modules, setModules] = useState([]);
   const [currentModuleId, setCurrentModuleId] = useState("");

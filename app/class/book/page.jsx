@@ -7,6 +7,7 @@ import { Clock, Star, Trophy, Lock, PlayCircle, CheckCircle } from '@phosphor-ic
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { motion } from 'framer-motion';
 import { useClassData } from '../layout';
 /**
  * ModuleIconNode Component
@@ -18,7 +19,6 @@ import { useClassData } from '../layout';
 // --- New Component for the Circular Node Icon ---
 // This component is solely responsible for rendering the circle node with the correct icon and styling based on the module status.
 function ModuleIconNode({ status }) {
-
   //const moduleProgress = module.status === "completed" ? 100 : 0
 
   // Determine status colors and icons
@@ -52,7 +52,10 @@ function ModuleIconNode({ status }) {
 
   return (
     // This div renders the physical circle node element
-    <div
+    <motion.div
+      initial={{ scale: 0, rotate: -90 }}
+      animate={{ scale: 1, rotate: 0 }}
+      transition={{ type: "spring", stiffness: 140, damping: 10 }}
       className={cn(
         "w-16 h-16 rounded-full flex items-center justify-center border-4",
         styles.bgColor,
@@ -63,7 +66,7 @@ function ModuleIconNode({ status }) {
       )}
     >
       {styles.icon}
-    </div>
+    </motion.div>
   );
 }
 
@@ -185,12 +188,23 @@ function LearningPathStep({ module, index, arrayIndex, displayIndex, currentInde
     // when the card is removed. This ensures the absolute node's vertical
     // positioning (top-1/2) is relative to a stable height, maintaining
     // the visual spacing between nodes set by the parent's space-y-24.
-    <div className={`flex ${side === "left" ? "justify-start" : "justify-end"} relative min-w-full min-h-[8rem]`}>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        type: "spring",
+        stiffness: 100,
+        damping: 12,
+        delay: arrayIndex * 0.15, // stagger items
+      }}
+      className={`flex ${side === "left" ? "justify-start" : "justify-end"} relative min-w-full min-h-[8rem]`}
+    >
       {/* Node Container - absolute top-1/2 -translate-y-1/2 */}
       <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
         <ModuleIconNode status={module.status} /> {/* The node itself (w-16 h-16) has fixed size */}
       </div>
 
+      
       {/* Content card */}
       <Card
         className={cn(
@@ -203,7 +217,7 @@ function LearningPathStep({ module, index, arrayIndex, displayIndex, currentInde
         {/* <ModuleCardContent module={module} index={index} /> */}
         <ModuleCardContent module={module} index={index} arrayIndex={arrayIndex} displayIndex={displayIndex} currentIndex={currentIndex} />
       </Card>
-    </div>
+    </motion.div>
 
   );
 }
@@ -280,7 +294,6 @@ function LearningPathProgress({
   // };
   // Function to load progress from localStorage
   useEffect(() => {
-
     // Only load progress on client-side
     loadProgress();
   }, []); // Empty dependency array means this runs once on mount
@@ -474,7 +487,6 @@ function LearningPathProgress({
     await saveProgress(resetProgress);
   };
 
-
   // Calculate overall progress
   const totalLessons = modules.reduce((acc, module) => acc + module.lessons, 0)
   const completedLessons = modules.reduce(
@@ -548,7 +560,6 @@ function LearningPathProgress({
     </div>
   )
 }
-
 
 export default function RootLayoutWrapper() {
   return (

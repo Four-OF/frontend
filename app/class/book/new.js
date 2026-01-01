@@ -1,3 +1,4 @@
+// 
 'use client';
 
 import React, { Suspense, useState, useEffect, createContext, useContext } from 'react';
@@ -50,7 +51,7 @@ const languageNames = {
 };
 
 
- function RootLayout({ children }) {
+function RootLayout({ children }) {
   const pathname = usePathname();
   const router = useRouter();
   //const [isLoading, setIsLoading] = useState(true);

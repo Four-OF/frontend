@@ -397,12 +397,12 @@ function RootLayout({ children }) {
             <div className="flex flex-1 flex-col md:flex-row">
               {/* Left Sidebar (Desktop Only) */}
               {/* Left Sidebar - Only show if not lesson page */}
-              <aside className="hidden md:block w-20 lg:w-64 fixed left-0 top-0 h-full border-r border-violet-100 p-4 flex flex-col z-20">
+              <aside className="hidden md:block w-20 lg:w-80 fixed left-0 top-0 h-full border-r border-violet-100 p-4 flex flex-col z-20">
                 <SideNavbar />
               </aside>
               {/* Main Content - Adjust margins based on lesson page */}
-              <div className={`flex-1 md:ml-20 lg:ml-64 lg:mr-96 min-h-screen`}>
-                <main className="max-w-2xl mx-auto p-4 overflow-y-auto">
+              <div className={`flex-1 md:ml-20 lg:ml-64 min-h-screen`}>
+                <main className="max-w-2xl mx-8 md:mx-8 lg:mx-40 p-4 overflow-y-auto">
                   {/* Header - Only show if not lesson page */}
                   <div className="hidden md:block sticky top-0 bg-white border-b border-violet-100 p-4 z-10">
                     <h1 className="text-xl font-bold text-violet-900">
@@ -439,7 +439,7 @@ function RootLayout({ children }) {
                       {pathname === '/class/phrasebook' && 'phrasebook'}
                       {pathname === '/class/profile' && 'Profile'}
                       {pathname === '/class/Settings' && 'Settings'}
-                    </h1>
+                    </h1> 
                   </div>
                   {children}
                 </main>
