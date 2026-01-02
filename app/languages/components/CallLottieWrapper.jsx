@@ -3,9 +3,9 @@
 
 import dynamic from 'next/dynamic';
 
-const LottieLoader = dynamic(() => import('./calllottie'), {
+const LottieCallLoader = dynamic(() => import('./calllottie'), {
   ssr: false,
   loading: () => <div>Loading animation...</div>, // Optional fallback
 });
 
-export default LottieLoader;
+export default LottieCallLoader;

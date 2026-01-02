@@ -197,7 +197,6 @@ const SignupForm = () => {
                     suvAnswer: page3Answer,
                 },
             };
-
             // Submit survey data
             const surveyResponse = await fetch("http://localhost:8080/survey", {
                 method: "POST",
