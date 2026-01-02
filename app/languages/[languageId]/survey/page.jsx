@@ -3,11 +3,10 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
-import Second from "../../components/second";
-import Hdyhau from "../../components/hdyhau";
 import { CaretLeft } from '@phosphor-icons/react';
 import LottieLoader from "../../components/LottieLoaderWrapper";
 import { Progress } from "@heroui/progress";
+import LottieCallLoader from '../../components/CallLottieWrapper';
 
 //error boundary to gracefully handle unexpected errors
 function ErrorBoundary({ children }) {
@@ -20,24 +19,24 @@ function ErrorBoundary({ children }) {
 
 // Map of language IDs to their display names
 const languageNames = {
+  am: "Amharic",
+  ig: "Igbo",
   kr: "Krio",
-  me: "Mende",
-  te: "Temne",
-  yo: "Yoruba",
-  tw: "Twi",
   ki: "Kishwahili",
   li: "Lingala",
+  ma: "Mandinka",
+  me: "Mende",
+  sw: "Swahili",
+  te: "Temne",
+  tu: "Turkish",
+  tw: "Twi",
+  
   fu: "Fulani",
   ha: "Hausa",
-  am: "Amharic",
-
-  ma: "Mandinka",
-  sw: "Swahili",
+  yo: "Yoruba",
   ko: "Korean",
   it: "Italian",
   du: "Dutch",
-  tu: "Turkish",
-  ig: "Igbo",
 };
 
 export default function Welcome({ Component, pageProps }) {
@@ -47,15 +46,16 @@ export default function Welcome({ Component, pageProps }) {
   // console.log(`Language selected: ${languageName}`); // Log for debugging
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedCard, setSelectedCard] = useState(null);// State to track the second card selection on page 1
-  const [selectedSecondCard, setSelectedSecondCard] = useState(null); // State to track the selected card on page 2
-  const [selectedThirdCard, setSelectedThirdCard] = useState(null); // State to track the selected card on page 3
+  const [selectedOptions, setSelectedOptions] = useState({1: null, 2: null, 3: null});
   const [loading, setLoading] = useState(true);
+  const [callLoad, setCallLoad] = useState(false);
   // State to track loading status]
   // Add a new state to control the final progress animation
   const [isAnimatingFinalProgress, setIsAnimatingFinalProgress] = useState(false);
 
   const totalPages = 3;
+
+  const setSelectedForCurrentPage = (value) => setSelectedOptions(prev => ({...prev, [currentPage]: value}));
 
   // Save to localStorage
   useEffect(() => {
@@ -66,21 +66,13 @@ export default function Welcome({ Component, pageProps }) {
   useEffect(() => {
     // Restore progress from localStorage on component mount
     const savedPage = localStorage.getItem('currentPage');
-    const savedCard = localStorage.getItem('selectedCard1');
-    const savedSecondCard = localStorage.getItem('selectedSecondCard2');
-    const savedThirdCard = localStorage.getItem('selectedThirdCard3');
+    const savedOptions = localStorage.getItem('selectedOptions');
 
     if (savedPage) {
       setCurrentPage(parseInt(savedPage));
     }
-    if (savedCard) {
-      setSelectedCard(parseInt(savedCard));
-    }
-    if (savedSecondCard) {
-      setSelectedSecondCard(parseInt(savedSecondCard));
-    }
-    if (savedThirdCard) {
-      setSelectedThirdCard(parseInt(savedThirdCard));
+    if (savedOptions) {
+      setSelectedOptions(JSON.parse(savedOptions));
     }
 
         // Always show loader for at least 1 second
@@ -95,10 +87,8 @@ export default function Welcome({ Component, pageProps }) {
   // Save progress to localStorage whenever selections or page changes
   useEffect(() => {
     localStorage.setItem('currentPage', currentPage);
-    localStorage.setItem('selectedCard', selectedCard);
-    localStorage.setItem('selectedSecondCard', selectedSecondCard);
-    localStorage.setItem('selectedThirdCard', selectedThirdCard);
-  }, [currentPage, selectedCard, selectedSecondCard, selectedThirdCard]);
+    localStorage.setItem('selectedOptions', JSON.stringify(selectedOptions));
+  }, [currentPage, selectedOptions]);
 
   // Check if loading screen has been shown before
   useEffect(() => {
@@ -116,20 +106,29 @@ export default function Welcome({ Component, pageProps }) {
 
   const handleNext = () => {
     if (currentPage < totalPages) {
-      setCurrentPage((prev) => prev + 1);// If on page 3, trigger the final progress animation
-
+      const nextPage = currentPage + 1;
+      
+      // 2. If moving to page 3, trigger the loader
+      if (nextPage === 3) {
+        setCallLoad(true);
+        setTimeout(() => setLoading(false), 2000); // Hide loader after 2 seconds
+      }
+      
+      setCurrentPage(nextPage);
       setIsAnimatingFinalProgress(true);
     } else if (currentPage === totalPages) {
       // Redirect to signup page with query parameters for selections
       router.push(
-        `/auth/signup?language=${languageName}&page1Answer=${selectedCard}&page2Answer=${selectedSecondCard}&page3Answer=${selectedThirdCard}`
+        `/auth/signup?language=${languageName}&page1Answer=${selectedOptions[1]}&page2Answer=${selectedOptions[2]}&page3Answer=${selectedOptions[3]}`
       );
+      console.log(`Survey complete. Redirecting to signup... ${selectedOptions[1]}${selectedOptions[2]}${selectedOptions[3]}`);
     }
   };
 
   const handlePrev = () => {
     if (currentPage > 1) {
       setCurrentPage(prev => prev - 1);
+      setCallLoad(false); // Reset loading if they go back
     } else if (currentPage === 1) {
       router.back(); // If on the first page and back is clicked, go back to the previous page in history
     }
@@ -137,26 +136,21 @@ export default function Welcome({ Component, pageProps }) {
   };
 
   const handleCardClick = (id) => {
-    setSelectedCard(id); // Set the clicked card's ID as the selected one
+    setSelectedForCurrentPage(id); // Set the clicked card's ID as the selected one
     console.log(`Card ${id} clicked`); // Log the clicked card ID for debugging purposes
   };
 
   const isPreviousDisabled = currentPage === 1; // Disable "Previous" on page 1
 
   //Disable based on current page's selection
-  const isContinueDisabled =
-    (currentPage === 1 && selectedCard === null) ||
-    (currentPage === 2 && selectedSecondCard === null) ||
-    (currentPage === 3 && selectedThirdCard === null);
+  const isContinueDisabled = selectedOptions[currentPage] === null;
 
 
   console.log('Page:', currentPage, '| Disabled:', isContinueDisabled);
 
   // Calculate width percentages for expansion/contraction
   const progressWidth = {
-    1: '0%',
-    2: '50%',
-    3: '100%',
+    1: 33, 2: 66, 3: 100
   };
 
   // Set loading to false after a delay (simulating data fetching)
@@ -166,17 +160,51 @@ export default function Welcome({ Component, pageProps }) {
   //   const timer = setTimeout(() => setLoading(false), 3000);
   //   return () => clearTimeout(timer); // Cleanup timeout
   // }, []);
+  const survey = [
+    {
+      id: `Why are you learning ${languageName}?`,
+      options: {
+        1: "😗Talk to People",
+        2: "🎉Just for Fun/Curiosity",
+        3: "🫡Other",
+      },
+    },
+    {
+      id: `How much ${languageName} do you know?`,
+      options: {
+        1: `😳I'm new to ${languageName}`, //language
+        2: `🫠I know some ${languageName}`,
+        3: `😌I'm confident in ${languageName}`
+      },
+    },
+    {
+      id: "How did you hear about fourof?",
+      options: {
+        1: "🛜Web",
+        2: "📱Socials",
+        3: "👥Family/Friends"
+      },
+    }
+  ];
+  const getCurrentSurveyItem = () => {
+    if (currentPage >= 1 && currentPage <= survey.length) {
+      return survey[currentPage - 1];
+    }
+    return null;
+  };
   return (
     <>
       {loading ? (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-white">
           <LottieLoader width={150} height={150} />
+          {/* <LottieCallLoader /> */}
+          {/* <p className="mt-4 text-gray-500 animate-pulse">Tailoring your experience...</p> */}
         </div>
         ) : (
         <ErrorBoundary>
           <div className="h-screen flex flex-col w-full">
             {/* Top Content */}
-            <div className={`flex flex-col items-center justify-center mt-5 w-full ${currentPage === 4 ? 'hidden' : ''}`}>
+            <div className={`flex flex-col items-center justify-center mt-3 w-full ${currentPage === 4 ? 'hidden' : ''}`}>
               <div className="w-full flex items-center gap-4 px-4">
                 <button
                   onClick={handlePrev}
@@ -199,62 +227,33 @@ export default function Welcome({ Component, pageProps }) {
             </div>
 
             {/* Page Content */}
-            <div className="flex flex-col items-center justify-center mt-5 w-full">
-              <div className="text-center">
-                {currentPage === 1 && (
+            <div className="flex flex-col items-center justify-center w-full">
+                {/* 3. PAGE 3 SPECIFIC LOTTIE: Only shows when user is on Page 3 */}
+                {currentPage === 3 && (
+                  <LottieCallLoader width={90} height={150} /> 
+                )}
+
+                {currentPage >= 1 && currentPage <= 3 && (
                   <>
-                    <h2 className="mt-3">Why are you learning {languageName}?</h2>
-                    <div className="flex flex-col items-center justify-center h-full gap-4 mx-auto mt-20 p-4">
-                      {/* Rectangle 1 */}
-                      <button
-                        onClick={() => handleCardClick(1)}
-                        className={`w-64 h-16 bg-gray-100 rounded-lg shadow-md border-b-4 transition-all cursor-pointer duration-200 ${selectedCard === 1
-                          ? 'bg-sky-100 border-2 border-sky-500'
-                          : 'bg-white border border-gray-200 hover:bg-gray-50'
-                          }`}
-                      >
-                        <div className="p-4 text-gray-600">😗Talk to People</div>
-                      </button>
-
-                      {/* Rectangle 2 */}
-                      <button
-                        onClick={() => handleCardClick(2)}
-                        className={`w-64 h-16 bg-gray-100 rounded-lg shadow-md border-b-4 transition-all cursor-pointer duration-200 ${selectedCard === 2
-                          ? 'bg-sky-100 border-2 border-sky-500'
-                          : 'bg-white border border-gray-200 hover:bg-gray-50'
-                          }`}
-                      >
-                        <div className="p-4 text-gray-600">🎉Just for Fun/Curiosity</div>
-                      
-                      </button>
-
-                      {/* Rectangle 3 */}
-                      <button
-                        onClick={() => handleCardClick(3)}
-                        className={`w-64 h-16 bg-gray-100 rounded-lg shadow-md border-b-4 transition-all cursor-pointer duration-200 ${selectedCard === 3
-                          ? 'bg-sky-100 border-2 border-sky-500'
-                          : 'bg-white border border-gray-200 hover:bg-gray-50'
-                          }`}
-                      >
-                        <div className="p-4 text-gray-800">🫡Other </div>
-                      </button>
+                    <h3 className="">{getCurrentSurveyItem().id}</h3>
+                    <div className="flex flex-col items-center h-full gap-2 mx-auto mt-16 p-2">
+                      {Object.entries(getCurrentSurveyItem().options).map(([key, value]) => (
+                        <button
+                          key={key}
+                          onClick={() => handleCardClick(parseInt(key))}
+                          className={`w-72 h-16 bg-gray-100 rounded-lg shadow-md border-b-4 transition-all cursor-pointer duration-200 ${selectedOptions[currentPage] === parseInt(key)
+                            ? 'bg-sky-100 border-2 border-sky-500'
+                            : 'bg-white border border-gray-200 hover:bg-gray-50'
+                            }`}
+                        >
+                          <div className="p-4 text-gray-600">
+                            <p>{value}</p>
+                          </div>
+                        </button>
+                      ))}
                     </div>
                   </>
                 )}
-                {currentPage === 2 &&
-                  <Second
-                    language={languageName}
-                    selectedCard={selectedSecondCard}
-                    setSelectedCard={setSelectedSecondCard}
-                  />
-                }
-                {currentPage === 3 &&
-                  <Hdyhau
-                    language={languageName}
-                    selectedCard={selectedThirdCard}
-                    setSelectedCard={setSelectedThirdCard}
-                  />}
-              </div>
             </div>
 
             {/* Bottom Navigation Bar */}
